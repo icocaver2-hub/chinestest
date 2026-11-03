@@ -1,0 +1,25 @@
+# 依存・ビルド成果物
+node_modules/
+dist/
+*.tsbuildinfo
+
+# テスト生成物
+test-results/
+playwright-report/
+blob-report/
+coverage/
+
+# 個人の学習データ・私的な教材や録音（Gitに入れない）
+chinese-study-backup-*.json
+private/
+*.local
+
+# 秘密情報・ローカル設定
+.env
+.env.*
+!.env.example
+
+# エディタ・OS
+.DS_Store
+.vscode/
+.idea/

@@ -1,0 +1,58 @@
+# GitHub Pagesへの公開。mainへのpush（または手動実行）で、検証→ビルド→公開を行う。
+# 事前にリポジトリの Settings → Pages → Build and deployment → Source を「GitHub Actions」にする。
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# 既定は読み取りのみ。公開ジョブだけにPagesへの書き込みを許可する。
+permissions:
+  contents: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Pagesの配信パスを取得
+        id: pages
+        uses: actions/configure-pages@v5
+
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm run test:unit
+
+      - name: ビルド（/<リポジトリ名>/ 配下で動くようにする）
+        run: npm run build
+        env:
+          BASE_PATH: ${{ steps.pages.outputs.base_path }}
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

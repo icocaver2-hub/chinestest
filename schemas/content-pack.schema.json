@@ -1,0 +1,651 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "chinese-study/content-pack/v1",
+  "title": "教材JSON契約 v1",
+  "description": "docs/05_CONTENT_FORMAT.mdの機械可読版。意味上の検査（ID重複・正解参照・並べ替え順序・空欄数・参照先）はアプリ側で別途行う。",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "packId",
+    "title",
+    "scenarios",
+    "questions"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "packId": {
+      "$ref": "#/$defs/id"
+    },
+    "title": {
+      "$ref": "#/$defs/title"
+    },
+    "scenarios": {
+      "type": "array",
+      "maxItems": 100,
+      "items": {
+        "$ref": "#/$defs/scenario"
+      }
+    },
+    "questions": {
+      "type": "array",
+      "maxItems": 1000,
+      "items": {
+        "$ref": "#/$defs/question"
+      }
+    },
+    "audioAssets": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/audioAssetDeclaration"
+      }
+    }
+  },
+  "$defs": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9_-]{0,79}$"
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "text": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 4000,
+      "pattern": "\\S"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 120,
+      "pattern": "\\S"
+    },
+    "level": {
+      "enum": [
+        "beginner",
+        "elementary",
+        "intermediate"
+      ]
+    },
+    "category": {
+      "enum": [
+        "first_meeting",
+        "visit",
+        "meal",
+        "daily",
+        "care",
+        "relationship",
+        "marriage",
+        "future",
+        "repair"
+      ]
+    },
+    "turn": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "speaker",
+        "role",
+        "zh",
+        "pinyin",
+        "ja"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "speaker": {
+          "$ref": "#/$defs/text"
+        },
+        "role": {
+          "enum": [
+            "learner",
+            "partner"
+          ]
+        },
+        "zh": {
+          "$ref": "#/$defs/text"
+        },
+        "pinyin": {
+          "$ref": "#/$defs/text"
+        },
+        "ja": {
+          "$ref": "#/$defs/text"
+        },
+        "audioId": {
+          "$ref": "#/$defs/id"
+        }
+      }
+    },
+    "phrase": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "zh",
+        "pinyin",
+        "ja",
+        "note"
+      ],
+      "properties": {
+        "zh": {
+          "$ref": "#/$defs/text"
+        },
+        "pinyin": {
+          "$ref": "#/$defs/text"
+        },
+        "ja": {
+          "$ref": "#/$defs/text"
+        },
+        "note": {
+          "$ref": "#/$defs/text"
+        }
+      }
+    },
+    "substitution": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "zh",
+        "pinyin",
+        "ja"
+      ],
+      "properties": {
+        "zh": {
+          "$ref": "#/$defs/text"
+        },
+        "pinyin": {
+          "$ref": "#/$defs/text"
+        },
+        "ja": {
+          "$ref": "#/$defs/text"
+        }
+      }
+    },
+    "scenario": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "revision",
+        "category",
+        "title",
+        "level",
+        "situation",
+        "goal",
+        "turns",
+        "phrases",
+        "substitutions",
+        "notes"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "revision": {
+          "$ref": "#/$defs/revision"
+        },
+        "category": {
+          "$ref": "#/$defs/category"
+        },
+        "title": {
+          "$ref": "#/$defs/title"
+        },
+        "level": {
+          "$ref": "#/$defs/level"
+        },
+        "situation": {
+          "$ref": "#/$defs/text"
+        },
+        "goal": {
+          "$ref": "#/$defs/text"
+        },
+        "turns": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 30,
+          "items": {
+            "$ref": "#/$defs/turn"
+          }
+        },
+        "phrases": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 30,
+          "items": {
+            "$ref": "#/$defs/phrase"
+          }
+        },
+        "substitutions": {
+          "type": "array",
+          "maxItems": 30,
+          "items": {
+            "$ref": "#/$defs/substitution"
+          }
+        },
+        "notes": {
+          "type": "array",
+          "maxItems": 20,
+          "items": {
+            "$ref": "#/$defs/text"
+          }
+        }
+      }
+    },
+    "tag": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 40,
+      "pattern": "\\S"
+    },
+    "questionCommon": {
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "revision": {
+          "$ref": "#/$defs/revision"
+        },
+        "scenarioId": {
+          "$ref": "#/$defs/id"
+        },
+        "level": {
+          "$ref": "#/$defs/level"
+        },
+        "tags": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 10,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/tag"
+          }
+        },
+        "prompt": {
+          "$ref": "#/$defs/text"
+        },
+        "explanation": {
+          "$ref": "#/$defs/text"
+        },
+        "pinyin": {
+          "$ref": "#/$defs/text"
+        },
+        "translation": {
+          "$ref": "#/$defs/text"
+        },
+        "audioId": {
+          "$ref": "#/$defs/id"
+        },
+        "presentation": {
+          "enum": [
+            "text",
+            "listening"
+          ]
+        },
+        "transcript": {
+          "$ref": "#/$defs/text"
+        }
+      }
+    },
+    "listeningRule": {
+      "type": "object",
+      "if": {
+        "type": "object",
+        "required": [
+          "presentation"
+        ],
+        "properties": {
+          "presentation": {
+            "const": "listening"
+          }
+        }
+      },
+      "then": {
+        "type": "object",
+        "required": [
+          "audioId",
+          "transcript"
+        ]
+      }
+    },
+    "choice": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "text"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "text": {
+          "$ref": "#/$defs/text"
+        }
+      }
+    },
+    "token": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "text"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "text": {
+          "$ref": "#/$defs/text"
+        }
+      }
+    },
+    "singleChoiceQuestion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "revision",
+        "type",
+        "scenarioId",
+        "level",
+        "tags",
+        "prompt",
+        "explanation",
+        "pinyin",
+        "translation",
+        "choices",
+        "answerId"
+      ],
+      "properties": {
+        "type": {
+          "const": "single_choice"
+        },
+        "id": {
+          "$ref": "#/$defs/questionCommon/properties/id"
+        },
+        "revision": {
+          "$ref": "#/$defs/questionCommon/properties/revision"
+        },
+        "scenarioId": {
+          "$ref": "#/$defs/questionCommon/properties/scenarioId"
+        },
+        "level": {
+          "$ref": "#/$defs/questionCommon/properties/level"
+        },
+        "tags": {
+          "$ref": "#/$defs/questionCommon/properties/tags"
+        },
+        "prompt": {
+          "$ref": "#/$defs/questionCommon/properties/prompt"
+        },
+        "explanation": {
+          "$ref": "#/$defs/questionCommon/properties/explanation"
+        },
+        "pinyin": {
+          "$ref": "#/$defs/questionCommon/properties/pinyin"
+        },
+        "translation": {
+          "$ref": "#/$defs/questionCommon/properties/translation"
+        },
+        "audioId": {
+          "$ref": "#/$defs/questionCommon/properties/audioId"
+        },
+        "presentation": {
+          "$ref": "#/$defs/questionCommon/properties/presentation"
+        },
+        "transcript": {
+          "$ref": "#/$defs/questionCommon/properties/transcript"
+        },
+        "choices": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 6,
+          "items": {
+            "$ref": "#/$defs/choice"
+          }
+        },
+        "answerId": {
+          "$ref": "#/$defs/id"
+        }
+      },
+      "$ref": "#/$defs/listeningRule"
+    },
+    "orderingQuestion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "revision",
+        "type",
+        "scenarioId",
+        "level",
+        "tags",
+        "prompt",
+        "explanation",
+        "pinyin",
+        "translation",
+        "tokens",
+        "acceptedOrders"
+      ],
+      "properties": {
+        "type": {
+          "const": "ordering"
+        },
+        "id": {
+          "$ref": "#/$defs/questionCommon/properties/id"
+        },
+        "revision": {
+          "$ref": "#/$defs/questionCommon/properties/revision"
+        },
+        "scenarioId": {
+          "$ref": "#/$defs/questionCommon/properties/scenarioId"
+        },
+        "level": {
+          "$ref": "#/$defs/questionCommon/properties/level"
+        },
+        "tags": {
+          "$ref": "#/$defs/questionCommon/properties/tags"
+        },
+        "prompt": {
+          "$ref": "#/$defs/questionCommon/properties/prompt"
+        },
+        "explanation": {
+          "$ref": "#/$defs/questionCommon/properties/explanation"
+        },
+        "pinyin": {
+          "$ref": "#/$defs/questionCommon/properties/pinyin"
+        },
+        "translation": {
+          "$ref": "#/$defs/questionCommon/properties/translation"
+        },
+        "audioId": {
+          "$ref": "#/$defs/questionCommon/properties/audioId"
+        },
+        "presentation": {
+          "$ref": "#/$defs/questionCommon/properties/presentation"
+        },
+        "transcript": {
+          "$ref": "#/$defs/questionCommon/properties/transcript"
+        },
+        "tokens": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 20,
+          "items": {
+            "$ref": "#/$defs/token"
+          }
+        },
+        "acceptedOrders": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 20,
+            "items": {
+              "$ref": "#/$defs/id"
+            }
+          }
+        }
+      },
+      "$ref": "#/$defs/listeningRule"
+    },
+    "fillBlankQuestion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "revision",
+        "type",
+        "scenarioId",
+        "level",
+        "tags",
+        "prompt",
+        "explanation",
+        "pinyin",
+        "translation",
+        "sentence",
+        "acceptedAnswers"
+      ],
+      "properties": {
+        "type": {
+          "const": "fill_blank"
+        },
+        "id": {
+          "$ref": "#/$defs/questionCommon/properties/id"
+        },
+        "revision": {
+          "$ref": "#/$defs/questionCommon/properties/revision"
+        },
+        "scenarioId": {
+          "$ref": "#/$defs/questionCommon/properties/scenarioId"
+        },
+        "level": {
+          "$ref": "#/$defs/questionCommon/properties/level"
+        },
+        "tags": {
+          "$ref": "#/$defs/questionCommon/properties/tags"
+        },
+        "prompt": {
+          "$ref": "#/$defs/questionCommon/properties/prompt"
+        },
+        "explanation": {
+          "$ref": "#/$defs/questionCommon/properties/explanation"
+        },
+        "pinyin": {
+          "$ref": "#/$defs/questionCommon/properties/pinyin"
+        },
+        "translation": {
+          "$ref": "#/$defs/questionCommon/properties/translation"
+        },
+        "audioId": {
+          "$ref": "#/$defs/questionCommon/properties/audioId"
+        },
+        "presentation": {
+          "$ref": "#/$defs/questionCommon/properties/presentation"
+        },
+        "transcript": {
+          "$ref": "#/$defs/questionCommon/properties/transcript"
+        },
+        "sentence": {
+          "$ref": "#/$defs/text"
+        },
+        "acceptedAnswers": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 20,
+          "items": {
+            "$ref": "#/$defs/text"
+          }
+        }
+      },
+      "$ref": "#/$defs/listeningRule"
+    },
+    "question": {
+      "type": "object",
+      "required": [
+        "type"
+      ],
+      "properties": {
+        "type": {
+          "enum": [
+            "single_choice",
+            "ordering",
+            "fill_blank"
+          ]
+        }
+      },
+      "if": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "const": "single_choice"
+          }
+        }
+      },
+      "then": {
+        "$ref": "#/$defs/singleChoiceQuestion"
+      },
+      "else": {
+        "if": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "ordering"
+            }
+          }
+        },
+        "then": {
+          "$ref": "#/$defs/orderingQuestion"
+        },
+        "else": {
+          "$ref": "#/$defs/fillBlankQuestion"
+        }
+      }
+    },
+    "audioAssetDeclaration": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "fileName",
+        "mimeType",
+        "source",
+        "license"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "fileName": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200,
+          "pattern": "^[^/\\\\:*?\"<>|\\u0000-\\u001f]+$",
+          "not": {
+            "pattern": "^\\.+$"
+          }
+        },
+        "mimeType": {
+          "enum": [
+            "audio/mpeg",
+            "audio/wav",
+            "audio/ogg",
+            "audio/mp4"
+          ]
+        },
+        "source": {
+          "$ref": "#/$defs/text"
+        },
+        "license": {
+          "$ref": "#/$defs/text"
+        }
+      }
+    }
+  }
+}

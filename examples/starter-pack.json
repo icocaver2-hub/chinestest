@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "packId": "sample-meal",
+  "title": "取り込みサンプル：ご両親との食事",
+  "scenarios": [
+    {
+      "id": "sample-meal-scene",
+      "revision": 1,
+      "category": "meal",
+      "title": "料理の感想を伝える",
+      "level": "beginner",
+      "situation": "ご両親と食卓を囲み、料理の感想や好みを話します。",
+      "goal": "料理の感想を伝え、好きな食べ物について答えられる。",
+      "turns": [
+        {
+          "id": "turn-1",
+          "speaker": "自分",
+          "role": "learner",
+          "zh": "这道菜很好吃。",
+          "pinyin": "Zhè dào cài hěn hǎochī.",
+          "ja": "この料理はとてもおいしいです。"
+        },
+        {
+          "id": "turn-2",
+          "speaker": "ご両親のどちらか",
+          "role": "partner",
+          "zh": "谢谢，你喜欢吃什么菜？",
+          "pinyin": "Xièxie, nǐ xǐhuan chī shénme cài?",
+          "ja": "ありがとう。どんな料理が好きですか。"
+        },
+        {
+          "id": "turn-3",
+          "speaker": "自分",
+          "role": "learner",
+          "zh": "我喜欢吃鱼。",
+          "pinyin": "Wǒ xǐhuan chī yú.",
+          "ja": "魚を食べるのが好きです。"
+        },
+        {
+          "id": "turn-4",
+          "speaker": "ご両親のどちらか",
+          "role": "partner",
+          "zh": "那再吃一点吧。",
+          "pinyin": "Nà zài chī yìdiǎn ba.",
+          "ja": "それなら、もう少し食べてくださいね。"
+        }
+      ],
+      "phrases": [
+        {"zh": "这道菜", "pinyin": "zhè dào cài", "ja": "この料理", "note": "料理を数える際に「道」を使います。"},
+        {"zh": "很好吃", "pinyin": "hěn hǎochī", "ja": "とてもおいしい", "note": "食べ物の感想に使います。"},
+        {"zh": "谢谢", "pinyin": "xièxie", "ja": "ありがとう", "note": "感謝を伝える基本表現です。"},
+        {"zh": "喜欢吃", "pinyin": "xǐhuan chī", "ja": "食べるのが好き", "note": "後ろに食べ物を置きます。"},
+        {"zh": "什么菜", "pinyin": "shénme cài", "ja": "どんな料理", "note": "料理の種類を尋ねます。"},
+        {"zh": "再吃一点", "pinyin": "zài chī yìdiǎn", "ja": "もう少し食べる", "note": "「再」は追加の行動を表します。"}
+      ],
+      "substitutions": [
+        {"zh": "我喜欢吃蔬菜。", "pinyin": "Wǒ xǐhuan chī shūcài.", "ja": "野菜を食べるのが好きです。"}
+      ],
+      "notes": ["相手への呼び方は、家族との関係に合わせて確認しましょう。", "このサンプルに音声は含まれていません。"]
+    }
+  ],
+  "questions": [
+    {
+      "id": "sample-meal-q001",
+      "revision": 1,
+      "type": "single_choice",
+      "scenarioId": "sample-meal-scene",
+      "level": "beginner",
+      "tags": ["食事", "感想"],
+      "prompt": "「この料理はとてもおいしいです」に合う文を選んでください。",
+      "choices": [
+        {"id": "a", "text": "这道菜很好吃。"},
+        {"id": "b", "text": "今天天气很好。"},
+        {"id": "c", "text": "我明天去工作。"}
+      ],
+      "answerId": "a",
+      "explanation": "「这道菜」は「この料理」、「很好吃」は「とてもおいしい」という意味です。",
+      "pinyin": "Zhè dào cài hěn hǎochī.",
+      "translation": "この料理はとてもおいしいです。"
+    },
+    {
+      "id": "sample-meal-q002",
+      "revision": 1,
+      "type": "ordering",
+      "scenarioId": "sample-meal-scene",
+      "level": "beginner",
+      "tags": ["食事", "好み"],
+      "prompt": "「私は魚を食べるのが好きです」になるように並べ替えてください。",
+      "tokens": [
+        {"id": "t1", "text": "我"},
+        {"id": "t2", "text": "喜欢"},
+        {"id": "t3", "text": "吃"},
+        {"id": "t4", "text": "鱼"}
+      ],
+      "acceptedOrders": [["t1", "t2", "t3", "t4"]],
+      "explanation": "主語の「我」に続けて、「喜欢吃」と食べ物の「鱼」を置きます。",
+      "pinyin": "Wǒ xǐhuan chī yú.",
+      "translation": "私は魚を食べるのが好きです。"
+    },
+    {
+      "id": "sample-meal-q003",
+      "revision": 1,
+      "type": "fill_blank",
+      "scenarioId": "sample-meal-scene",
+      "level": "beginner",
+      "tags": ["食事", "感想"],
+      "prompt": "「この料理はとてもおいしいです」になるよう、「おいしい」にあたる語を入力してください。",
+      "sentence": "这道菜很{{blank}}。",
+      "acceptedAnswers": ["好吃"],
+      "explanation": "食べ物が「おいしい」は「好吃」と表現します。",
+      "pinyin": "Zhè dào cài hěn hǎochī.",
+      "translation": "この料理はとてもおいしいです。"
+    }
+  ]
+}
