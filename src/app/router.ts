@@ -12,6 +12,7 @@ export type Route =
   | { name: 'materials' }
   | { name: 'settings' }
   | { name: 'history' }
+  | { name: 'session'; id: string }
   | { name: 'not_found'; path: string };
 
 const ID_RE = /^[a-z0-9][a-z0-9_-]{0,79}$/;
@@ -46,6 +47,8 @@ export function parseHash(hash: string): Route {
     }
     if (ID_RE.test(id)) return { name: 'scenario', id };
   }
+  const sm = /^\/session\/([A-Za-z0-9_-]{1,80})$/.exec(normalized);
+  if (sm) return { name: 'session', id: sm[1]! };
   return { name: 'not_found', path: normalized };
 }
 
@@ -55,6 +58,8 @@ export function hrefFor(route: Exclude<Route, { name: 'not_found' }>): string {
       return '#/';
     case 'scenario':
       return `#/scenarios/${encodeURIComponent(route.id)}`;
+    case 'session':
+      return `#/session/${encodeURIComponent(route.id)}`;
     default:
       return `#/${route.name}`;
   }
