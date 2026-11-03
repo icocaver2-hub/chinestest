@@ -2,6 +2,7 @@ import { createContext, useCallback, useContext, useEffect, useState, type React
 import { systemClock, type Clock } from '../domain/clock';
 import { openStudyDb } from '../repositories/db';
 import { describeStorageError, StorageError, toStorageError } from '../repositories/storage-error';
+import { PracticeRepository } from '../repositories/practice-repository';
 import { StudyRepository } from '../repositories/study-repository';
 import type { Settings } from '../types/db';
 import { describeBundledProblems, registerBundledContent, type FetchText } from './bootstrap';
@@ -11,7 +12,14 @@ export type AppErrorKind = 'db_unavailable' | 'blocked' | 'quota' | 'needs_conne
 export type AppState =
   | { status: 'loading' }
   | { status: 'error'; kind: AppErrorKind; message: string }
-  | { status: 'ready'; repo: StudyRepository; settings: Settings; warnings: string[]; noContent: boolean };
+  | {
+      status: 'ready';
+      repo: StudyRepository;
+      practice: PracticeRepository;
+      settings: Settings;
+      warnings: string[];
+      noContent: boolean;
+    };
 
 interface AppContextValue {
   state: AppState;
@@ -59,7 +67,7 @@ async function start(clock: Clock, onVersionChange: () => void, onBlocked: () =>
     const warnings = describeBundledProblems(report);
     if (report.indexUnavailable) warnings.unshift('同梱教材の一覧を確認できませんでした。保存済みの教材で学習できます。');
     const settings = await repo.getSettings();
-    return { status: 'ready', repo, settings, warnings, noContent: report.noContent };
+    return { status: 'ready', repo, practice: new PracticeRepository(repo.db), settings, warnings, noContent: report.noContent };
   } catch (e) {
     const se = toStorageError(e);
     return { status: 'error', kind: errorKindOf(se), message: describeStorageError(se) };
@@ -122,5 +130,5 @@ export function useApp(): AppContextValue {
 export function useReadyApp() {
   const app = useApp();
   if (app.state.status !== 'ready') throw new Error('準備が完了していません');
-  return { ...app, state: app.state, repo: app.state.repo, settings: app.state.settings };
+  return { ...app, state: app.state, repo: app.state.repo, practice: app.state.practice, settings: app.state.settings };
 }
