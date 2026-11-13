@@ -3,6 +3,7 @@
  */
 import { useId, useState, type FormEvent, type KeyboardEvent } from 'react';
 import { orderingTexts } from '../../domain/grading';
+import { langOf } from '../../components/labels';
 import { BLANK_MARKER, type FillBlankQuestion, type OrderingQuestion, type SingleChoiceQuestion } from '../../types/content';
 import type { AnswerValue } from '../../types/db';
 
@@ -26,7 +27,7 @@ export function SingleChoiceInput({ question, disabled, onSubmit }: InputProps<S
         {question.choices.map((c) => (
           <label key={c.id} className={`choice${selected === c.id ? ' choice-selected' : ''}`}>
             <input type="radio" name={name} value={c.id} checked={selected === c.id} onChange={() => setSelected(c.id)} />
-            <span className="zh" lang="zh-CN">
+            <span className={langOf(c.text) === 'ja' ? 'choice-ja' : 'zh'} lang={langOf(c.text)}>
               {c.text}
             </span>
           </label>

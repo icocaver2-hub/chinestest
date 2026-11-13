@@ -10,6 +10,7 @@ import type {
   AttemptResult,
   BookmarkRecord,
   BookmarkTargetType,
+  ConversationAttemptRecord,
   QuestionRecord,
   QuestionStateRecord,
   SessionOrigin,
@@ -199,6 +200,33 @@ export class PracticeRepository {
     } catch (e) {
       throw toStorageError(e);
     }
+  }
+
+  // ---- 会話の自己評価（自動採点の正答率には混ぜない） ----
+
+  /** submissionIdで重複を防いで保存する。既に保存済みなら保存済みの記録を返す。 */
+  async recordConversationRating(record: ConversationAttemptRecord): Promise<{ status: 'saved' | 'duplicate'; record: ConversationAttemptRecord }> {
+    try {
+      const tx = this.db.transaction('conversationAttempts', 'readwrite');
+      const existing = await tx.store.get(record.submissionId);
+      if (existing) {
+        await tx.done;
+        return { status: 'duplicate', record: existing };
+      }
+      await tx.store.add(record);
+      await tx.done;
+      return { status: 'saved', record };
+    } catch (e) {
+      throw toStorageError(e);
+    }
+  }
+
+  async listConversationRatings(scenarioId?: string): Promise<ConversationAttemptRecord[]> {
+    const rows =
+      scenarioId === undefined
+        ? await this.db.getAll('conversationAttempts')
+        : await this.db.getAllFromIndex('conversationAttempts', 'scenarioId', scenarioId);
+    return rows.sort((a, b) => a.occurredAt.localeCompare(b.occurredAt) || a.submissionId.localeCompare(b.submissionId));
   }
 
   // ---- ブックマーク ----

@@ -238,3 +238,24 @@ describe('ブックマーク', () => {
     expect(await again.practice.listBookmarks()).toEqual([]);
   });
 });
+
+describe('会話の自己評価', () => {
+  it('submissionIdで重複せず、回答（正答率）とは別に保存される', async () => {
+    const { db, practice } = await setup();
+    const rec = {
+      submissionId: 'c1',
+      scenarioId: 'family-marriage',
+      revision: 1,
+      turnId: 't1',
+      occurredAt: '2026-11-13T01:00:00.000Z',
+      studyDate: '2026-11-13',
+      timeZone: 'Asia/Tokyo',
+      rating: 'said' as const,
+    };
+    expect((await practice.recordConversationRating(rec)).status).toBe('saved');
+    expect((await practice.recordConversationRating({ ...rec, rating: 'could_not_say' })).status).toBe('duplicate');
+    expect(await practice.listConversationRatings('family-marriage')).toEqual([rec]);
+    expect(await db.count('attempts')).toBe(0);
+    expect(await db.count('questionStates')).toBe(0);
+  });
+});

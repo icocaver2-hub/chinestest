@@ -1,6 +1,6 @@
 # chinestest — 中国語会話学習アプリ
 
-作成日: 2026-10-23（日本時間） / Claude Code向け改訂: 2026-11-01 / 仕様バージョン: 1.1 / 状態: フェーズ2（日々の演習・復習）実装済み
+作成日: 2026-10-23（日本時間） / Claude Code向け改訂: 2026-11-01 / 仕様バージョン: 1.1 / 状態: フェーズ3（会話・教材拡充）実装済み
 
 中国語を話すパートナーのご家族と日常会話ができることを目指す、自分専用の学習アプリです。場面別会話、問題演習、苦手問題の復習、教材ファイルの追加を、外部APIを使わずに提供します。
 
@@ -23,7 +23,8 @@ npm run test:e2e       # 本番ビルドを /chinestest-e2e/ 配下で配信し�
 - E2Eは導入済みのPlaywright用Chromiumを使います。手元にない場合は`npx playwright install chromium`を先に実行してください。
 - サブパスで配信する場合は`BASE_PATH`を指定してビルドします（例: `BASE_PATH=/chinestest/ npm run build`）。プレビューも同じ値で`BASE_PATH=/chinestest/ npm run preview`とします。
 - `schemas/content-pack.schema.json`を変更したら`npm run generate:validator`で検査関数を作り直してください（`npm run lint`が不一致を検出します）。
-- 同梱教材は`public/content/`に置き、`public/content/index.json`の`bundledPacks`に登録します。現在はサンプル（`sample-meal`）のみです。
+- 同梱教材は`public/content/`に置き、`public/content/index.json`の`bundledPacks`に登録します。現在の同梱教材は初期パック`core-family`（6場面・48問）です。`sample-meal.json`は取り込み形式の例として置いてあります（同梱はしていません）。
+- 学習用の中国語音声は未収録です。
 - GitHub Pagesへの公開は`.github/workflows/deploy-pages.yml`で行います。`main`へのpush（またはActions画面からの手動実行）で、lint・型検査・単体テスト・ビルドのあと公開します。初回はリポジトリの Settings → Pages → Source を「GitHub Actions」にしてください。非公開リポジトリでPagesを使うにはGitHubの有料プランが必要です。公開したページと同梱教材はURLを知っている人なら閲覧できます（学習記録はブラウザ内のみ）。
 - ブラウザでの確認はChromium（Playwright）のみです。Safari・Edge・実機スマートフォンでは未確認です。
 

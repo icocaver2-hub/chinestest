@@ -10,6 +10,7 @@ import { ReviewPage } from '../features/review/ReviewPage';
 import { SessionPage } from '../features/practice/SessionPage';
 import { ScenarioDetailPage } from '../features/scenarios/ScenarioDetailPage';
 import { ScenarioListPage } from '../features/scenarios/ScenarioListPage';
+import { TalkPage } from '../features/scenarios/TalkPage';
 import { SettingsPage } from '../features/settings/SettingsPage';
 import { useApp, type AppErrorKind } from './AppContext';
 import { parseHash, useHash, type Route } from './router';
@@ -30,6 +31,8 @@ function Page({ route }: { route: Route }) {
       return <ScenarioListPage />;
     case 'scenario':
       return <ScenarioDetailPage key={route.id} id={route.id} />;
+    case 'scenario_talk':
+      return <TalkPage key={route.id} id={route.id} />;
     case 'practice':
       return <PracticePage />;
     case 'review':

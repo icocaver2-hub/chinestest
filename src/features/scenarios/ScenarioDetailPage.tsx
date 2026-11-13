@@ -1,12 +1,23 @@
-import { useCallback } from 'react';
+import { useCallback, useState } from 'react';
 import { useReadyApp } from '../../app/AppContext';
 import { hrefFor } from '../../app/router';
+import { startCustomSession } from '../../app/start-session';
+import { AudioPlayer } from '../../components/AudioPlayer';
 import { CATEGORY_LABELS, LEVEL_LABELS, QUESTION_TYPE_LABELS } from '../../components/labels';
 import { EmptyState, ErrorState, Loading } from '../../components/States';
 import { useAsyncData } from '../../components/useAsyncData';
+import { describeStorageError, toStorageError } from '../../repositories/storage-error';
+import type { ScenarioRecord } from '../../types/db';
+import { DisplayToggles } from './DisplayToggles';
+
+export function scenarioHasAudio(s: ScenarioRecord): boolean {
+  return s.turns.some((t) => t.audioId !== undefined);
+}
 
 export function ScenarioDetailPage({ id }: { id: string }) {
-  const { repo, settings, dataVersion } = useReadyApp();
+  const { repo, practice, settings, clock, dataVersion, bumpDataVersion } = useReadyApp();
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const load = useCallback(async () => {
     void dataVersion;
     const [scenario, questions] = await Promise.all([repo.getScenario(id), repo.listQuestionsByScenario(id)]);
@@ -32,6 +43,21 @@ export function ScenarioDetailPage({ id }: { id: string }) {
     );
   }
 
+  async function solveRelated() {
+    setBusy(true);
+    setError(null);
+    try {
+      const session = await startCustomSession(practice, 'practice', questions, clock);
+      bumpDataVersion();
+      if (session) window.location.hash = hrefFor({ name: 'session', id: session.sessionId });
+      else setBusy(false);
+    } catch (e) {
+      setError(describeStorageError(toStorageError(e)));
+      setBusy(false);
+    }
+  }
+
+  const hasAudio = scenarioHasAudio(s);
   return (
     <article className="page">
       <p className="small">
@@ -41,7 +67,7 @@ export function ScenarioDetailPage({ id }: { id: string }) {
       <p className="meta-line">
         <span className="badge">{CATEGORY_LABELS[s.category]}</span>
         <span className="badge">{LEVEL_LABELS[s.level]}</span>
-        <span>{s.turns.some((t) => t.audioId !== undefined) ? '音声あり（再生機能は準備中）' : '音声未収録'}</span>
+        <span>{hasAudio ? '音声あり' : '音声未収録'}</span>
       </p>
 
       <section className="card">
@@ -50,7 +76,24 @@ export function ScenarioDetailPage({ id }: { id: string }) {
         <p>
           <strong>目標:</strong> {s.goal}
         </p>
+        <div className="row-actions">
+          <a className="button button-primary" href={hrefFor({ name: 'scenario_talk', id: s.id })}>
+            会話練習をする
+          </a>
+          {questions.length > 0 && (
+            <button type="button" className="button" disabled={busy} onClick={solveRelated}>
+              関連問題を解く（{questions.length}問）
+            </button>
+          )}
+        </div>
+        {error && (
+          <p role="alert" className="help help-error">
+            ⚠ 開始できませんでした。{error}
+          </p>
+        )}
       </section>
+
+      <DisplayToggles />
 
       <section className="card">
         <h2>会話例</h2>
@@ -67,6 +110,7 @@ export function ScenarioDetailPage({ id }: { id: string }) {
                 </p>
               )}
               {settings.showTranslation && <p className="ja">{t.ja}</p>}
+              {t.audioId && <AudioPlayer packId={s.ownerPackId} audioId={t.audioId} label={t.zh} />}
             </li>
           ))}
         </ol>
@@ -96,7 +140,7 @@ export function ScenarioDetailPage({ id }: { id: string }) {
       {s.substitutions.length > 0 && (
         <section className="card">
           <h2>置き換え例</h2>
-          <ul>
+          <ul className="phrases">
             {s.substitutions.map((p, i) => (
               <li key={i}>
                 <span className="zh" lang="zh-CN">
@@ -139,7 +183,6 @@ export function ScenarioDetailPage({ id }: { id: string }) {
             ))}
           </ul>
         )}
-        <p className="muted small">会話練習・問題演習は準備中です（フェーズ2・3で追加予定）。</p>
       </section>
     </article>
   );

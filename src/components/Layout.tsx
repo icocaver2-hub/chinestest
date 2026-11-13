@@ -19,6 +19,7 @@ function activeNav(route: Route): NavName | null {
       return 'home';
     case 'scenarios':
     case 'scenario':
+    case 'scenario_talk':
       return 'scenarios';
     case 'practice':
     case 'session':

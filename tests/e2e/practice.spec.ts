@@ -9,6 +9,8 @@ test.beforeEach(async ({ page }) => {
   page.on('pageerror', (e) => {
     throw e;
   });
+  // 採点・復習の流れは3問のサンプル教材で確かめる（同梱教材の一覧だけ差し替える）
+  await page.route('**/content/index.json', (route) => route.fulfill({ json: { bundledPacks: ['sample-meal.json'] } }));
 });
 
 /** 表示中の問題に答える（サンプル教材の3問） */
