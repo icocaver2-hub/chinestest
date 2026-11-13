@@ -7,6 +7,7 @@ import { MaterialsPage } from '../features/materials/MaterialsPage';
 import { NotFoundPage } from '../features/NotFoundPage';
 import { PracticePage } from '../features/practice/PracticePage';
 import { ReviewPage } from '../features/review/ReviewPage';
+import { SessionPage } from '../features/practice/SessionPage';
 import { ScenarioDetailPage } from '../features/scenarios/ScenarioDetailPage';
 import { ScenarioListPage } from '../features/scenarios/ScenarioListPage';
 import { SettingsPage } from '../features/settings/SettingsPage';
@@ -39,6 +40,8 @@ function Page({ route }: { route: Route }) {
       return <SettingsPage />;
     case 'history':
       return <HistoryPage />;
+    case 'session':
+      return <SessionPage key={route.id} id={route.id} />;
     case 'not_found':
       return <NotFoundPage path={route.path} />;
   }

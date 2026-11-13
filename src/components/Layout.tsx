@@ -21,6 +21,7 @@ function activeNav(route: Route): NavName | null {
     case 'scenario':
       return 'scenarios';
     case 'practice':
+    case 'session':
       return 'practice';
     case 'review':
       return 'review';

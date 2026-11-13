@@ -1,4 +1,5 @@
 import type { Level, QuestionType, ScenarioCategory } from '../types/content';
+import type { SessionOrigin } from '../types/db';
 
 export const LEVEL_LABELS: Record<Level, string> = {
   beginner: '入門',
@@ -23,3 +24,13 @@ export const QUESTION_TYPE_LABELS: Record<QuestionType, string> = {
   ordering: '並べ替え',
   fill_blank: '穴埋め',
 };
+
+export const ORIGIN_LABELS: Record<SessionOrigin, string> = {
+  today: '今日の学習',
+  practice: '問題演習',
+  review: '復習',
+};
+
+export function formatPercent(ratio: number | null): string {
+  return ratio === null ? '—' : `${Math.round(ratio * 100)}%`;
+}
