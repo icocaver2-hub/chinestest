@@ -1,0 +1,2418 @@
+{
+  "schemaVersion": 1,
+  "packId": "core-family",
+  "title": "初期教材：パートナーのご家族との会話",
+  "scenarios": [
+    {
+      "id": "family-first-meeting",
+      "revision": 1,
+      "category": "first_meeting",
+      "title": "初対面・自己紹介",
+      "level": "beginner",
+      "situation": "パートナーのご両親に初めて会い、挨拶と自己紹介をします。",
+      "goal": "挨拶をして出身や仕事を伝え、相手にも質問を返せる。",
+      "turns": [
+        {
+          "id": "t1",
+          "speaker": "自分",
+          "role": "learner",
+          "zh": "叔叔好！阿姨好！",
+          "pinyin": "Shūshu hǎo! Āyí hǎo!",
+          "ja": "（お父さん、お母さんに）こんにちは。"
+        },
+        {
+          "id": "t2",
+          "speaker": "ご両親",
+          "role": "partner",
+          "zh": "你好！欢迎欢迎，快请坐。",
+          "pinyin": "Nǐ hǎo! Huānyíng huānyíng, kuài qǐng zuò.",
+          "ja": "こんにちは。ようこそ。さあ、座ってください。"
+        },
+        {
+          "id": "t3",
+          "speaker": "自分",
+          "role": "learner",
+          "zh": "很高兴认识你们。我是日本人。",
+          "pinyin": "Hěn gāoxìng rènshi nǐmen. Wǒ shì Rìběnrén.",
+          "ja": "お会いできてうれしいです。日本人です。"
+        },
+        {
+          "id": "t4",
+          "speaker": "ご両親",
+          "role": "partner",
+          "zh": "你做什么工作？",
+          "pinyin": "Nǐ zuò shénme gōngzuò?",
+          "ja": "お仕事は何をしていますか。"
+        },
+        {
+          "id": "t5",
+          "speaker": "自分",
+          "role": "learner",
+          "zh": "我在一家公司上班。",
+          "pinyin": "Wǒ zài yì jiā gōngsī shàngbān.",
+          "ja": "会社に勤めています。"
+        },
+        {
+          "id": "t6",
+          "speaker": "ご両親",
+          "role": "partner",
+          "zh": "你的中文说得真好！",
+          "pinyin": "Nǐ de Zhōngwén shuō de zhēn hǎo!",
+          "ja": "中国語が本当に上手ですね。"
+        },
+        {
+          "id": "t7",
+          "speaker": "自分",
+          "role": "learner",
+          "zh": "哪里哪里，我还在学习。以后请多关照。",
+          "pinyin": "Nǎli nǎli, wǒ hái zài xuéxí. Yǐhòu qǐng duō guānzhào.",
+          "ja": "いえいえ、まだ勉強中です。これからよろしくお願いします。"
+        },
+        {
+          "id": "t8",
+          "speaker": "自分",
+          "role": "learner",
+          "zh": "你们平时喜欢做什么？",
+          "pinyin": "Nǐmen píngshí xǐhuan zuò shénme?",
+          "ja": "普段は何をするのがお好きですか。"
+        },
+        {
+          "id": "t9",
+          "speaker": "ご両親",
+          "role": "partner",
+          "zh": "我们喜欢散步，也喜欢做饭。",
+          "pinyin": "Wǒmen xǐhuan sànbù, yě xǐhuan zuòfàn.",
+          "ja": "散歩が好きで、料理をするのも好きです。"
+        }
+      ],
+      "phrases": [
+        {
+          "zh": "叔叔",
+          "pinyin": "shūshu",
+          "ja": "おじさん（相手の父親への呼びかけ）",
+          "note": "年上の男性への親しみをこめた呼び方です。結婚前に相手の父親を呼ぶときによく使われます。"
+        },
+        {
+          "zh": "阿姨",
+          "pinyin": "āyí",
+          "ja": "おばさん（相手の母親への呼びかけ）",
+          "note": "年上の女性への親しみをこめた呼び方です。結婚前に相手の母親を呼ぶときによく使われます。"
+        },
+        {
+          "zh": "很高兴认识你们",
+          "pinyin": "hěn gāoxìng rènshi nǐmen",
+          "ja": "お会いできてうれしいです",
+          "note": "一人に言うときは「很高兴认识您」。"
+        },
+        {
+          "zh": "欢迎",
+          "pinyin": "huānyíng",
+          "ja": "ようこそ",
+          "note": "来客を迎えるときの言葉です。重ねて「欢迎欢迎」とも言います。"
+        },
+        {
+          "zh": "你做什么工作？",
+          "pinyin": "Nǐ zuò shénme gōngzuò?",
+          "ja": "お仕事は何ですか",
+          "note": "仕事を尋ねる基本の質問です。"
+        },
+        {
+          "zh": "在一家公司上班",
+          "pinyin": "zài yì jiā gōngsī shàngbān",
+          "ja": "会社に勤めている",
+          "note": "「家」は会社などを数える量詞です。「一」は第一声の前で yì と読みます。"
+        },
+        {
+          "zh": "哪里哪里",
+          "pinyin": "nǎli nǎli",
+          "ja": "いえいえ",
+          "note": "ほめられたときの控えめな返事です。"
+        },
+        {
+          "zh": "以后请多关照",
+          "pinyin": "yǐhòu qǐng duō guānzhào",
+          "ja": "これからよろしくお願いします",
+          "note": "初対面の挨拶の締めくくりに使えます。"
+        }
+      ],
+      "substitutions": [
+        {
+          "zh": "我是从日本来的。",
+          "pinyin": "Wǒ shì cóng Rìběn lái de.",
+          "ja": "日本から来ました。"
+        },
+        {
+          "zh": "我在银行上班。",
+          "pinyin": "Wǒ zài yínháng shàngbān.",
+          "ja": "銀行に勤めています。"
+        },
+        {
+          "zh": "我是老师。",
+          "pinyin": "Wǒ shì lǎoshī.",
+          "ja": "教師です。"
+        }
+      ],
+      "notes": [
+        "「叔叔」「阿姨」は、結婚前に相手の両親を呼ぶときによく使われる呼び方です。家庭によって呼び方が違うので、パートナーに確認しましょう。",
+        "出身や仕事は、自分のことに置き換えて練習しましょう。"
+      ]
+    },
+    {
+      "id": "family-visit",
+      "revision": 1,
+      "category": "visit",
+      "title": "ご実家への訪問",
+      "level": "beginner",
+      "situation": "ご両親の家を訪ね、手土産を渡し、手伝いを申し出て、帰りの挨拶をします。",
+      "goal": "訪問のお礼・手土産・手伝いの申し出・帰りの挨拶ができる。",
+      "turns": [
+        {
+          "id": "t1",
+          "speaker": "自分",
+          "role": "learner",
+          "zh": "打扰了。谢谢你们邀请我来。",
+          "pinyin": "Dǎrǎo le. Xièxie nǐmen yāoqǐng wǒ lái.",
+          "ja": "お邪魔します。お招きいただきありがとうございます。"
+        },
+        {
+          "id": "t2",
+          "speaker": "ご両親",
+          "role": "partner",
+          "zh": "来了就好，别客气。",
+          "pinyin": "Lái le jiù hǎo, bié kèqi.",
+          "ja": "来てくれてうれしいよ。遠慮しないで。"
+        },
+        {
+          "id": "t3",
+          "speaker": "自分",
+          "role": "learner",
+          "zh": "这是一点儿小礼物，请收下。",
+          "pinyin": "Zhè shì yìdiǎnr xiǎo lǐwù, qǐng shōuxià.",
+          "ja": "ささやかなものですが、どうぞお受け取りください。"
+        },
+        {
+          "id": "t4",
+          "speaker": "ご両親",
+          "role": "partner",
+          "zh": "你太客气了，谢谢！",
+          "pinyin": "Nǐ tài kèqi le, xièxie!",
+          "ja": "ご丁寧に、ありがとう。"
+        },
+        {
+          "id": "t5",
+          "speaker": "自分",
+          "role": "learner",
+          "zh": "有什么需要我帮忙的吗？",
+          "pinyin": "Yǒu shénme xūyào wǒ bāngmáng de ma?",
+          "ja": "何かお手伝いできることはありますか。"
+        },
+        {
+          "id": "t6",
+          "speaker": "ご両親",
+          "role": "partner",
+          "zh": "不用不用，你坐着休息吧。",
+          "pinyin": "Búyòng búyòng, nǐ zuòzhe xiūxi ba.",
+          "ja": "いいのよ、座って休んでいて。"
+        },
+        {
+          "id": "t7",
+          "speaker": "自分",
+          "role": "learner",
+          "zh": "时间不早了，我该走了。",
+          "pinyin": "Shíjiān bù zǎo le, wǒ gāi zǒu le.",
+          "ja": "もう遅いので、そろそろ失礼します。"
+        },
+        {
+          "id": "t8",
+          "speaker": "ご両親",
+          "role": "partner",
+          "zh": "路上小心，下次再来玩儿！",
+          "pinyin": "Lùshang xiǎoxīn, xià cì zài lái wánr!",
+          "ja": "気をつけて帰ってね。また遊びに来てね。"
+        },
+        {
+          "id": "t9",
+          "speaker": "自分",
+          "role": "learner",
+          "zh": "谢谢你们的招待，再见！",
+          "pinyin": "Xièxie nǐmen de zhāodài, zàijiàn!",
+          "ja": "おもてなしありがとうございました。さようなら。"
+        }
+      ],
+      "phrases": [
+        {
+          "zh": "打扰了",
+          "pinyin": "dǎrǎo le",
+          "ja": "お邪魔します",
+          "note": "人の家に上がるときや、用事をお願いするときに使います。"
+        },
+        {
+          "zh": "谢谢你们邀请我来",
+          "pinyin": "xièxie nǐmen yāoqǐng wǒ lái",
+          "ja": "招いてくれてありがとう",
+          "note": "一人に言うときは「谢谢您」。"
+        },
+        {
+          "zh": "一点儿小礼物",
+          "pinyin": "yìdiǎnr xiǎo lǐwù",
+          "ja": "ささやかな贈り物",
+          "note": "手土産を渡すときの控えめな言い方です。"
+        },
+        {
+          "zh": "请收下",
+          "pinyin": "qǐng shōuxià",
+          "ja": "どうぞお受け取りください",
+          "note": "物を渡すときに添えます。"
+        },
+        {
+          "zh": "有什么需要我帮忙的吗？",
+          "pinyin": "Yǒu shénme xūyào wǒ bāngmáng de ma?",
+          "ja": "何かお手伝いできることはありますか",
+          "note": "食事の準備や片付けのときに申し出ます。"
+        },
+        {
+          "zh": "别客气",
+          "pinyin": "bié kèqi",
+          "ja": "遠慮しないで",
+          "note": "「不客气」は「どういたしまして」の意味になります。"
+        },
+        {
+          "zh": "我该走了",
+          "pinyin": "wǒ gāi zǒu le",
+          "ja": "そろそろ失礼します",
+          "note": "「该」は「〜すべき時だ」という意味です。"
+        },
+        {
+          "zh": "谢谢你们的招待",
+          "pinyin": "xièxie nǐmen de zhāodài",
+          "ja": "おもてなしに感謝します",
+          "note": "帰り際のお礼に使います。"
+        }
+      ],
+      "substitutions": [
+        {
+          "zh": "我来洗碗吧。",
+          "pinyin": "Wǒ lái xǐ wǎn ba.",
+          "ja": "私がお皿を洗いますね。"
+        },
+        {
+          "zh": "这是日本的点心，请尝尝。",
+          "pinyin": "Zhè shì Rìběn de diǎnxin, qǐng chángchang.",
+          "ja": "これは日本のお菓子です。どうぞ召し上がってください。"
+        },
+        {
+          "zh": "下次我再来看你们。",
+          "pinyin": "Xià cì wǒ zài lái kàn nǐmen.",
+          "ja": "また会いに来ます。"
+        }
+      ],
+      "notes": [
+        "手土産の習慣や、手伝いを申し出たときの反応は家庭によって違います。",
+        "「不用不用」と断られたら、無理に続けず様子を見て決めましょう。"
+      ]
+    },
+    {
+      "id": "family-meal",
+      "revision": 1,
+      "category": "meal",
+      "title": "一緒に食事",
+      "level": "beginner",
+      "situation": "ご両親と食卓を囲み、料理の感想や好みを話し、おかわりを勧められます。",
+      "goal": "料理の感想や好みを伝え、勧めを受けたり、満腹を伝えたりできる。",
+      "turns": [
+        {
+          "id": "t1",
+          "speaker": "ご両親",
+          "role": "partner",
+          "zh": "来，多吃点儿，别客气。",
+          "pinyin": "Lái, duō chī diǎnr, bié kèqi.",
+          "ja": "さあ、たくさん食べて。遠慮しないで。"
+        },
+        {
+          "id": "t2",
+          "speaker": "自分",
+          "role": "learner",
+          "zh": "谢谢阿姨。这道菜真好吃！",
+          "pinyin": "Xièxie āyí. Zhè dào cài zhēn hǎochī!",
+          "ja": "ありがとうございます。この料理、本当においしいです。"
+        },
+        {
+          "id": "t3",
+          "speaker": "ご両親",
+          "role": "partner",
+          "zh": "你喜欢吃辣的吗？",
+          "pinyin": "Nǐ xǐhuan chī là de ma?",
+          "ja": "辛いものは好き？"
+        },
+        {
+          "id": "t4",
+          "speaker": "自分",
+          "role": "learner",
+          "zh": "喜欢，但是我不太能吃辣。",
+          "pinyin": "Xǐhuan, dànshì wǒ bú tài néng chī là.",
+          "ja": "好きですが、辛いものはあまり得意ではありません。"
+        },
+        {
+          "id": "t5",
+          "speaker": "ご両親",
+          "role": "partner",
+          "zh": "那你尝尝这个，一点儿也不辣。",
+          "pinyin": "Nà nǐ chángchang zhège, yìdiǎnr yě bú là.",
+          "ja": "じゃあこれを食べてみて。全然辛くないから。"
+        },
+        {
+          "id": "t6",
+          "speaker": "自分",
+          "role": "learner",
+          "zh": "真香！这个菜叫什么名字？",
+          "pinyin": "Zhēn xiāng! Zhège cài jiào shénme míngzi?",
+          "ja": "いい香り！この料理は何という名前ですか。"
+        },
+        {
+          "id": "t7",
+          "speaker": "ご両親",
+          "role": "partner",
+          "zh": "这是红烧茄子，是家常菜。",
+          "pinyin": "Zhè shì hóngshāo qiézi, shì jiāchángcài.",
+          "ja": "これはナスの醤油煮込みで、家庭料理だよ。"
+        },
+        {
+          "id": "t8",
+          "speaker": "ご両親",
+          "role": "partner",
+          "zh": "再来一碗米饭吧？",
+          "pinyin": "Zài lái yì wǎn mǐfàn ba?",
+          "ja": "ご飯をもう一杯どう？"
+        },
+        {
+          "id": "t9",
+          "speaker": "自分",
+          "role": "learner",
+          "zh": "谢谢，我已经吃饱了。",
+          "pinyin": "Xièxie, wǒ yǐjīng chībǎo le.",
+          "ja": "ありがとうございます、もうおなかいっぱいです。"
+        }
+      ],
+      "phrases": [
+        {
+          "zh": "多吃点儿",
+          "pinyin": "duō chī diǎnr",
+          "ja": "たくさん食べて",
+          "note": "食事を勧めるときの決まり文句です。"
+        },
+        {
+          "zh": "这道菜真好吃",
+          "pinyin": "zhè dào cài zhēn hǎochī",
+          "ja": "この料理は本当においしい",
+          "note": "「道」は料理を数える量詞です。"
+        },
+        {
+          "zh": "你喜欢吃辣的吗？",
+          "pinyin": "Nǐ xǐhuan chī là de ma?",
+          "ja": "辛いものは好き？",
+          "note": "「辣的」で「辛いもの」。"
+        },
+        {
+          "zh": "不太能吃辣",
+          "pinyin": "bú tài néng chī là",
+          "ja": "辛いものはあまり得意ではない",
+          "note": "「不太」で「あまり〜ない」。「不」は第四声の前で bú と読みます。"
+        },
+        {
+          "zh": "尝尝",
+          "pinyin": "chángchang",
+          "ja": "ちょっと味見してみる",
+          "note": "動詞を重ねると「ちょっと〜してみる」の意味になります。"
+        },
+        {
+          "zh": "真香",
+          "pinyin": "zhēn xiāng",
+          "ja": "いい香り",
+          "note": "料理の香りをほめる言葉です。"
+        },
+        {
+          "zh": "叫什么名字",
+          "pinyin": "jiào shénme míngzi",
+          "ja": "何という名前",
+          "note": "料理や人の名前を尋ねるときに使います。"
+        },
+        {
+          "zh": "我已经吃饱了",
+          "pinyin": "wǒ yǐjīng chībǎo le",
+          "ja": "もうおなかいっぱいです",
+          "note": "おかわりを丁寧に断るときに使います。"
+        }
+      ],
+      "substitutions": [
+        {
+          "zh": "我喜欢吃饺子。",
+          "pinyin": "Wǒ xǐhuan chī jiǎozi.",
+          "ja": "餃子が好きです。"
+        },
+        {
+          "zh": "这个汤真好喝。",
+          "pinyin": "Zhège tāng zhēn hǎohē.",
+          "ja": "このスープ、本当においしいです。"
+        },
+        {
+          "zh": "我吃得很饱。",
+          "pinyin": "Wǒ chī de hěn bǎo.",
+          "ja": "おなかいっぱい食べました。"
+        }
+      ],
+      "notes": [
+        "スープや飲み物には「好吃」ではなく「好喝」を使います。",
+        "料理を勧められたときの断り方や、食べ残しへの考え方は家庭によって違います。"
+      ]
+    },
+    {
+      "id": "family-daily",
+      "revision": 1,
+      "category": "daily",
+      "title": "近況を話す",
+      "level": "beginner",
+      "situation": "食後にお茶を飲みながら、仕事や週末の過ごし方、天気について話します。",
+      "goal": "近況を簡単に伝え、相づちを打ちながら会話を続けられる。",
+      "turns": [
+        {
+          "id": "t1",
+          "speaker": "ご両親",
+          "role": "partner",
+          "zh": "最近工作忙吗？",
+          "pinyin": "Zuìjìn gōngzuò máng ma?",
+          "ja": "最近、仕事は忙しい？"
+        },
+        {
+          "id": "t2",
+          "speaker": "自分",
+          "role": "learner",
+          "zh": "挺忙的，不过还好。",
+          "pinyin": "Tǐng máng de, búguò hái hǎo.",
+          "ja": "けっこう忙しいですが、大丈夫です。"
+        },
+        {
+          "id": "t3",
+          "speaker": "ご両親",
+          "role": "partner",
+          "zh": "周末一般做什么？",
+          "pinyin": "Zhōumò yìbān zuò shénme?",
+          "ja": "週末は普段何をしているの？"
+        },
+        {
+          "id": "t4",
+          "speaker": "自分",
+          "role": "learner",
+          "zh": "我喜欢在家做饭，有时候去爬山。",
+          "pinyin": "Wǒ xǐhuan zài jiā zuòfàn, yǒu shíhou qù páshān.",
+          "ja": "家で料理をするのが好きで、ときどき山登りに行きます。"
+        },
+        {
+          "id": "t5",
+          "speaker": "ご両親",
+          "role": "partner",
+          "zh": "爬山好啊，对身体好。",
+          "pinyin": "Páshān hǎo a, duì shēntǐ hǎo.",
+          "ja": "山登りはいいね、体にいいから。"
+        },
+        {
+          "id": "t6",
+          "speaker": "自分",
+          "role": "learner",
+          "zh": "是啊。你们周末常去哪儿？",
+          "pinyin": "Shì a. Nǐmen zhōumò cháng qù nǎr?",
+          "ja": "そうですね。週末はよくどこへ行かれますか。"
+        },
+        {
+          "id": "t7",
+          "speaker": "ご両親",
+          "role": "partner",
+          "zh": "我们常去公园散步。今天天气不错。",
+          "pinyin": "Wǒmen cháng qù gōngyuán sànbù. Jīntiān tiānqì búcuò.",
+          "ja": "よく公園へ散歩に行くよ。今日はいい天気だね。"
+        },
+        {
+          "id": "t8",
+          "speaker": "自分",
+          "role": "learner",
+          "zh": "对，天气真好。那我们一起去散散步吧？",
+          "pinyin": "Duì, tiānqì zhēn hǎo. Nà wǒmen yìqǐ qù sànsan bù ba?",
+          "ja": "そうですね、本当にいい天気です。じゃあ一緒に散歩に行きませんか。"
+        }
+      ],
+      "phrases": [
+        {
+          "zh": "最近工作忙吗？",
+          "pinyin": "Zuìjìn gōngzuò máng ma?",
+          "ja": "最近、仕事は忙しい？",
+          "note": "近況を尋ねる定番の質問です。"
+        },
+        {
+          "zh": "挺忙的",
+          "pinyin": "tǐng máng de",
+          "ja": "けっこう忙しい",
+          "note": "「挺〜的」で「なかなか〜だ」。"
+        },
+        {
+          "zh": "还好",
+          "pinyin": "hái hǎo",
+          "ja": "まあまあ／大丈夫です",
+          "note": "相手を心配させないように答えるときにも使えます。"
+        },
+        {
+          "zh": "有时候",
+          "pinyin": "yǒu shíhou",
+          "ja": "ときどき",
+          "note": "頻度を表します。"
+        },
+        {
+          "zh": "是啊",
+          "pinyin": "shì a",
+          "ja": "そうですね",
+          "note": "相づちの基本です。"
+        },
+        {
+          "zh": "对",
+          "pinyin": "duì",
+          "ja": "そうです",
+          "note": "同意を示す短い相づちです。"
+        },
+        {
+          "zh": "天气不错",
+          "pinyin": "tiānqì búcuò",
+          "ja": "いい天気",
+          "note": "「不错」は「悪くない」、つまり「いい」の意味です。"
+        },
+        {
+          "zh": "一起去散散步吧",
+          "pinyin": "yìqǐ qù sànsan bù ba",
+          "ja": "一緒に散歩しましょう",
+          "note": "文末の「吧」で提案の言い方になります。"
+        }
+      ],
+      "substitutions": [
+        {
+          "zh": "最近有点儿累。",
+          "pinyin": "Zuìjìn yǒudiǎnr lèi.",
+          "ja": "最近ちょっと疲れています。"
+        },
+        {
+          "zh": "周末我常去看电影。",
+          "pinyin": "Zhōumò wǒ cháng qù kàn diànyǐng.",
+          "ja": "週末はよく映画を見に行きます。"
+        },
+        {
+          "zh": "今天有点儿冷。",
+          "pinyin": "Jīntiān yǒudiǎnr lěng.",
+          "ja": "今日は少し寒いです。"
+        }
+      ],
+      "notes": [
+        "「是啊」「对」「真的吗？」などの相づちを入れると、会話が続きやすくなります。",
+        "仕事や趣味は、自分のことに置き換えて練習しましょう。"
+      ]
+    },
+    {
+      "id": "family-marriage",
+      "revision": 1,
+      "category": "marriage",
+      "title": "結婚の挨拶",
+      "level": "beginner",
+      "situation": "二人で結婚の意思をご両親に伝え、祝福をお願いし、今後について話します。",
+      "goal": "お礼・二人の意思・祝福のお願いを丁寧に伝え、未定のことにも答えられる。",
+      "turns": [
+        {
+          "id": "t1",
+          "speaker": "自分",
+          "role": "learner",
+          "zh": "谢谢您二位今天抽时间和我们见面。",
+          "pinyin": "Xièxie nín èr wèi jīntiān chōu shíjiān hé wǒmen jiànmiàn.",
+          "ja": "今日は私たちに会う時間を作ってくださり、ありがとうございます。"
+        },
+        {
+          "id": "t2",
+          "speaker": "ご両親",
+          "role": "partner",
+          "zh": "不用客气，有什么事慢慢说。",
+          "pinyin": "Búyòng kèqi, yǒu shénme shì mànmàn shuō.",
+          "ja": "気にしないで。話があるならゆっくり聞かせて。"
+        },
+        {
+          "id": "t3",
+          "speaker": "自分",
+          "role": "learner",
+          "zh": "我们已经认真商量过了，决定结婚。",
+          "pinyin": "Wǒmen yǐjīng rènzhēn shāngliang guo le, juédìng jiéhūn.",
+          "ja": "二人で真剣に話し合い、結婚することを決めました。"
+        },
+        {
+          "id": "t4",
+          "speaker": "自分",
+          "role": "learner",
+          "zh": "我们希望得到您二位的祝福。",
+          "pinyin": "Wǒmen xīwàng dédào nín èr wèi de zhùfú.",
+          "ja": "お二人に祝福していただけたらと思っています。"
+        },
+        {
+          "id": "t5",
+          "speaker": "ご両親",
+          "role": "partner",
+          "zh": "你们什么时候结婚？",
+          "pinyin": "Nǐmen shénme shíhou jiéhūn?",
+          "ja": "いつ結婚するの？"
+        },
+        {
+          "id": "t6",
+          "speaker": "自分",
+          "role": "learner",
+          "zh": "具体的时间我们还在商量。",
+          "pinyin": "Jùtǐ de shíjiān wǒmen hái zài shāngliang.",
+          "ja": "具体的な時期は、まだ二人で相談しています。"
+        },
+        {
+          "id": "t7",
+          "speaker": "ご両親",
+          "role": "partner",
+          "zh": "以后打算住在哪里？",
+          "pinyin": "Yǐhòu dǎsuan zhù zài nǎli?",
+          "ja": "これからどこに住むつもり？"
+        },
+        {
+          "id": "t8",
+          "speaker": "自分",
+          "role": "learner",
+          "zh": "关于以后的生活，我们也做了一些计划。等决定了，我们再告诉您二位。",
+          "pinyin": "Guānyú yǐhòu de shēnghuó, wǒmen yě zuò le yìxiē jìhuà. Děng juédìng le, wǒmen zài gàosu nín èr wèi.",
+          "ja": "これからの生活についても、いくつか計画を立てています。決まったら、またお伝えします。"
+        },
+        {
+          "id": "t9",
+          "speaker": "ご両親",
+          "role": "partner",
+          "zh": "好，你们好好儿商量。",
+          "pinyin": "Hǎo, nǐmen hǎohāor shāngliang.",
+          "ja": "わかった。二人でよく相談してね。"
+        },
+        {
+          "id": "t10",
+          "speaker": "自分",
+          "role": "learner",
+          "zh": "谢谢叔叔阿姨。",
+          "pinyin": "Xièxie shūshu āyí.",
+          "ja": "ありがとうございます。"
+        }
+      ],
+      "phrases": [
+        {
+          "zh": "您二位",
+          "pinyin": "nín èr wèi",
+          "ja": "お二人",
+          "note": "二人の目上の人に、敬意をこめて呼びかける言い方です。"
+        },
+        {
+          "zh": "抽时间",
+          "pinyin": "chōu shíjiān",
+          "ja": "時間を作る",
+          "note": "忙しい中で時間を割いてもらったお礼に使います。"
+        },
+        {
+          "zh": "认真商量过了",
+          "pinyin": "rènzhēn shāngliang guo le",
+          "ja": "真剣に話し合った",
+          "note": "「过」は「〜したことがある・〜し終えた」を表します。"
+        },
+        {
+          "zh": "决定结婚",
+          "pinyin": "juédìng jiéhūn",
+          "ja": "結婚を決める",
+          "note": "二人の意思として伝える言い方です。"
+        },
+        {
+          "zh": "希望得到您二位的祝福",
+          "pinyin": "xīwàng dédào nín èr wèi de zhùfú",
+          "ja": "お二人に祝福していただきたい",
+          "note": "丁寧にお願いする言い方です。"
+        },
+        {
+          "zh": "还在商量",
+          "pinyin": "hái zài shāngliang",
+          "ja": "まだ相談している",
+          "note": "未定のことを聞かれたときに使えます。"
+        },
+        {
+          "zh": "等决定了，我们再告诉您",
+          "pinyin": "děng juédìng le, wǒmen zài gàosu nín",
+          "ja": "決まったらお伝えします",
+          "note": "「等〜了」で「〜したら」。"
+        }
+      ],
+      "substitutions": [
+        {
+          "zh": "我们会一起努力。",
+          "pinyin": "Wǒmen huì yìqǐ nǔlì.",
+          "ja": "二人で一緒に頑張ります。"
+        },
+        {
+          "zh": "这件事我们还没决定。",
+          "pinyin": "Zhè jiàn shì wǒmen hái méi juédìng.",
+          "ja": "このことはまだ決めていません。"
+        },
+        {
+          "zh": "有什么意见，请告诉我们。",
+          "pinyin": "Yǒu shénme yìjiàn, qǐng gàosu wǒmen.",
+          "ja": "ご意見があれば教えてください。"
+        }
+      ],
+      "notes": [
+        "ここにあるのは表現の例です。挨拶の順番や内容は、二人で相談して自分たちに合う形にしましょう。",
+        "結婚の時期や住む場所など未定のことは、無理に答えず「还在商量」と伝えてかまいません。",
+        "家庭によって考え方や習慣は違います。"
+      ]
+    },
+    {
+      "id": "family-clarification",
+      "revision": 1,
+      "category": "repair",
+      "title": "聞き返す",
+      "level": "beginner",
+      "situation": "相手の話が速かったり、知らない言葉が出てきたりしたときに、聞き返して確認します。",
+      "goal": "もう一度言ってもらう・ゆっくり話してもらう・意味を確認するお願いができる。",
+      "turns": [
+        {
+          "id": "t1",
+          "speaker": "ご両親",
+          "role": "partner",
+          "zh": "你明天几点的飞机？要不要我们送你去机场？",
+          "pinyin": "Nǐ míngtiān jǐ diǎn de fēijī? Yào bu yào wǒmen sòng nǐ qù jīchǎng?",
+          "ja": "明日は何時の飛行機？空港まで送ろうか？"
+        },
+        {
+          "id": "t2",
+          "speaker": "自分",
+          "role": "learner",
+          "zh": "不好意思，请您再说一遍，好吗？",
+          "pinyin": "Bù hǎoyìsi, qǐng nín zài shuō yí biàn, hǎo ma?",
+          "ja": "すみません、もう一度言っていただけますか。"
+        },
+        {
+          "id": "t3",
+          "speaker": "ご両親",
+          "role": "partner",
+          "zh": "我说，要不要送你去机场？",
+          "pinyin": "Wǒ shuō, yào bu yào sòng nǐ qù jīchǎng?",
+          "ja": "空港まで送ろうか、って言ったのよ。"
+        },
+        {
+          "id": "t4",
+          "speaker": "自分",
+          "role": "learner",
+          "zh": "请您说慢一点儿，我的中文还不太好。",
+          "pinyin": "Qǐng nín shuō màn yìdiǎnr, wǒ de Zhōngwén hái bú tài hǎo.",
+          "ja": "少しゆっくり話していただけますか。中国語がまだあまり上手ではないので。"
+        },
+        {
+          "id": "t5",
+          "speaker": "ご両親",
+          "role": "partner",
+          "zh": "好的。我们开车送你去机场，好不好？",
+          "pinyin": "Hǎo de. Wǒmen kāichē sòng nǐ qù jīchǎng, hǎo bu hǎo?",
+          "ja": "わかった。私たちが車で空港まで送ろうか？"
+        },
+        {
+          "id": "t6",
+          "speaker": "自分",
+          "role": "learner",
+          "zh": "“机场”是什么意思？",
+          "pinyin": "“Jīchǎng” shì shénme yìsi?",
+          "ja": "「机场」はどういう意味ですか。"
+        },
+        {
+          "id": "t7",
+          "speaker": "ご両親",
+          "role": "partner",
+          "zh": "就是坐飞机的地方。",
+          "pinyin": "Jiù shì zuò fēijī de dìfang.",
+          "ja": "飛行機に乗る場所のことよ。"
+        },
+        {
+          "id": "t8",
+          "speaker": "自分",
+          "role": "learner",
+          "zh": "我明白了。您是说送我去机场，对吗？",
+          "pinyin": "Wǒ míngbai le. Nín shì shuō sòng wǒ qù jīchǎng, duì ma?",
+          "ja": "わかりました。空港まで送ってくださるということですね？"
+        },
+        {
+          "id": "t9",
+          "speaker": "ご両親",
+          "role": "partner",
+          "zh": "对。",
+          "pinyin": "Duì.",
+          "ja": "そうよ。"
+        },
+        {
+          "id": "t10",
+          "speaker": "自分",
+          "role": "learner",
+          "zh": "太谢谢了，那麻烦你们了。",
+          "pinyin": "Tài xièxie le, nà máfan nǐmen le.",
+          "ja": "本当にありがとうございます。では、お願いします。"
+        }
+      ],
+      "phrases": [
+        {
+          "zh": "不好意思",
+          "pinyin": "bù hǎoyìsi",
+          "ja": "すみません",
+          "note": "軽く謝ったり、声をかけたりするときに使います。"
+        },
+        {
+          "zh": "请您再说一遍，好吗？",
+          "pinyin": "qǐng nín zài shuō yí biàn, hǎo ma?",
+          "ja": "もう一度言っていただけますか",
+          "note": "「一遍」は「一回（通して）」。「一」は第四声の前で yí と読みます。"
+        },
+        {
+          "zh": "请您说慢一点儿",
+          "pinyin": "qǐng nín shuō màn yìdiǎnr",
+          "ja": "少しゆっくり話してください",
+          "note": "「慢一点儿」で「少しゆっくり」。"
+        },
+        {
+          "zh": "……是什么意思？",
+          "pinyin": "…… shì shénme yìsi?",
+          "ja": "〜はどういう意味ですか",
+          "note": "分からない言葉をそのまま繰り返して尋ねます。"
+        },
+        {
+          "zh": "我明白了",
+          "pinyin": "wǒ míngbai le",
+          "ja": "わかりました",
+          "note": "理解できたことを伝えます。"
+        },
+        {
+          "zh": "您是说……，对吗？",
+          "pinyin": "nín shì shuō ……, duì ma?",
+          "ja": "〜ということですね？",
+          "note": "自分の理解が合っているかを確認します。"
+        },
+        {
+          "zh": "麻烦你们了",
+          "pinyin": "máfan nǐmen le",
+          "ja": "お手数をおかけします",
+          "note": "何かをしてもらうときのお礼に使います。"
+        }
+      ],
+      "substitutions": [
+        {
+          "zh": "我没听懂，请您再说一遍。",
+          "pinyin": "Wǒ méi tīngdǒng, qǐng nín zài shuō yí biàn.",
+          "ja": "聞き取れなかったので、もう一度お願いします。"
+        },
+        {
+          "zh": "这个字怎么念？",
+          "pinyin": "Zhège zì zěnme niàn?",
+          "ja": "この字はどう読みますか。"
+        },
+        {
+          "zh": "请您写一下，好吗？",
+          "pinyin": "Qǐng nín xiě yíxià, hǎo ma?",
+          "ja": "書いていただけますか。"
+        }
+      ],
+      "notes": [
+        "聞き返すのは失礼ではありません。分からないまま相づちを打つより、確認したほうが会話が続きます。",
+        "「您是说……，对吗？」で、自分の理解を言い直して確認できます。"
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "family-first-meeting-q1",
+      "revision": 1,
+      "type": "single_choice",
+      "scenarioId": "family-first-meeting",
+      "level": "beginner",
+      "tags": [
+        "初対面",
+        "挨拶"
+      ],
+      "prompt": "「お会いできてうれしいです」に合う文を選んでください。",
+      "choices": [
+        {
+          "id": "a",
+          "text": "很高兴认识你们。"
+        },
+        {
+          "id": "b",
+          "text": "谢谢你们的欢迎。"
+        },
+        {
+          "id": "c",
+          "text": "我是日本人。"
+        }
+      ],
+      "answerId": "a",
+      "explanation": "「认识」は「知り合う」。「很高兴认识你们」で「お会いできてうれしいです」になります。bは「歓迎してくれてありがとう」、cは「日本人です」。",
+      "pinyin": "Hěn gāoxìng rènshi nǐmen.",
+      "translation": "お会いできてうれしいです。"
+    },
+    {
+      "id": "family-first-meeting-q2",
+      "revision": 1,
+      "type": "single_choice",
+      "scenarioId": "family-first-meeting",
+      "level": "beginner",
+      "tags": [
+        "初対面",
+        "呼び方"
+      ],
+      "prompt": "結婚前に、相手の父親への呼びかけとしてよく使われるのはどれですか。",
+      "choices": [
+        {
+          "id": "a",
+          "text": "叔叔"
+        },
+        {
+          "id": "b",
+          "text": "爷爷"
+        },
+        {
+          "id": "c",
+          "text": "哥哥"
+        }
+      ],
+      "answerId": "a",
+      "explanation": "「叔叔」は年上の男性への親しみをこめた呼び方です。「爷爷」は祖父、「哥哥」は兄を指します。実際の呼び方は家庭に合わせて確認しましょう。",
+      "pinyin": "Shūshu",
+      "translation": "おじさん（相手の父親への呼びかけ）"
+    },
+    {
+      "id": "family-first-meeting-q3",
+      "revision": 1,
+      "type": "single_choice",
+      "scenarioId": "family-first-meeting",
+      "level": "beginner",
+      "tags": [
+        "初対面",
+        "謙遜"
+      ],
+      "prompt": "「中国語が上手ですね」とほめられました。控えめな返事として合うものを選んでください。",
+      "choices": [
+        {
+          "id": "a",
+          "text": "哪里哪里，我还在学习。"
+        },
+        {
+          "id": "b",
+          "text": "是的，我说得很好。"
+        },
+        {
+          "id": "c",
+          "text": "我不知道。"
+        }
+      ],
+      "answerId": "a",
+      "explanation": "「哪里哪里」はほめられたときの控えめな返事です。「我还在学习」は「まだ勉強中です」。",
+      "pinyin": "Nǎli nǎli, wǒ hái zài xuéxí.",
+      "translation": "いえいえ、まだ勉強中です。"
+    },
+    {
+      "id": "family-first-meeting-q4",
+      "revision": 1,
+      "type": "single_choice",
+      "scenarioId": "family-first-meeting",
+      "level": "beginner",
+      "tags": [
+        "初対面",
+        "仕事"
+      ],
+      "prompt": "「お仕事は何をしていますか」に合う文を選んでください。",
+      "choices": [
+        {
+          "id": "a",
+          "text": "你做什么工作？"
+        },
+        {
+          "id": "b",
+          "text": "你在哪儿工作？"
+        },
+        {
+          "id": "c",
+          "text": "你工作忙吗？"
+        }
+      ],
+      "answerId": "a",
+      "explanation": "「做什么工作」で「どんな仕事をするか」。bは「どこで働いていますか」、cは「仕事は忙しいですか」。",
+      "pinyin": "Nǐ zuò shénme gōngzuò?",
+      "translation": "お仕事は何をしていますか。"
+    },
+    {
+      "id": "family-first-meeting-q5",
+      "revision": 1,
+      "type": "ordering",
+      "scenarioId": "family-first-meeting",
+      "level": "beginner",
+      "tags": [
+        "初対面",
+        "仕事"
+      ],
+      "prompt": "「会社に勤めています」になるように並べ替えてください。",
+      "tokens": [
+        {
+          "id": "w1",
+          "text": "我"
+        },
+        {
+          "id": "w2",
+          "text": "在"
+        },
+        {
+          "id": "w3",
+          "text": "一家"
+        },
+        {
+          "id": "w4",
+          "text": "公司"
+        },
+        {
+          "id": "w5",
+          "text": "上班"
+        }
+      ],
+      "acceptedOrders": [
+        [
+          "w1",
+          "w2",
+          "w3",
+          "w4",
+          "w5"
+        ]
+      ],
+      "explanation": "「在＋場所＋上班」で「〜に勤めている」。場所を表す「在一家公司」を動詞「上班」の前に置きます。",
+      "pinyin": "Wǒ zài yì jiā gōngsī shàngbān.",
+      "translation": "会社に勤めています。"
+    },
+    {
+      "id": "family-first-meeting-q6",
+      "revision": 1,
+      "type": "ordering",
+      "scenarioId": "family-first-meeting",
+      "level": "beginner",
+      "tags": [
+        "初対面",
+        "質問"
+      ],
+      "prompt": "「（あなたたちは）普段は何をするのがお好きですか」になるように並べ替えてください。",
+      "tokens": [
+        {
+          "id": "w1",
+          "text": "你们"
+        },
+        {
+          "id": "w2",
+          "text": "平时"
+        },
+        {
+          "id": "w3",
+          "text": "喜欢"
+        },
+        {
+          "id": "w4",
+          "text": "做"
+        },
+        {
+          "id": "w5",
+          "text": "什么"
+        }
+      ],
+      "acceptedOrders": [
+        [
+          "w1",
+          "w2",
+          "w3",
+          "w4",
+          "w5"
+        ],
+        [
+          "w2",
+          "w1",
+          "w3",
+          "w4",
+          "w5"
+        ]
+      ],
+      "explanation": "時間を表す「平时（普段）」は主語の後ろにも前にも置けます。「喜欢做什么」で「何をするのが好きか」。",
+      "pinyin": "Nǐmen píngshí xǐhuan zuò shénme?",
+      "translation": "普段は何をするのがお好きですか。"
+    },
+    {
+      "id": "family-first-meeting-q7",
+      "revision": 1,
+      "type": "fill_blank",
+      "scenarioId": "family-first-meeting",
+      "level": "beginner",
+      "tags": [
+        "初対面",
+        "挨拶"
+      ],
+      "prompt": "「お会いできてうれしいです」になるよう、「知り合う」にあたる語を入力してください。",
+      "sentence": "很高兴{{blank}}你们。",
+      "acceptedAnswers": [
+        "认识"
+      ],
+      "explanation": "「认识」は「（人と）知り合う」。初対面の挨拶でよく使います。",
+      "pinyin": "Hěn gāoxìng rènshi nǐmen.",
+      "translation": "お会いできてうれしいです。"
+    },
+    {
+      "id": "family-first-meeting-q8",
+      "revision": 1,
+      "type": "fill_blank",
+      "scenarioId": "family-first-meeting",
+      "level": "beginner",
+      "tags": [
+        "初対面",
+        "挨拶"
+      ],
+      "prompt": "「これからよろしくお願いします」になるよう、空欄に入る語を入力してください。",
+      "sentence": "以后请多{{blank}}。",
+      "acceptedAnswers": [
+        "关照"
+      ],
+      "explanation": "「关照」は「面倒を見る・配慮する」。「请多关照」で「よろしくお願いします」になります。",
+      "pinyin": "Yǐhòu qǐng duō guānzhào.",
+      "translation": "これからよろしくお願いします。"
+    },
+    {
+      "id": "family-visit-q1",
+      "revision": 1,
+      "type": "single_choice",
+      "scenarioId": "family-visit",
+      "level": "beginner",
+      "tags": [
+        "訪問",
+        "挨拶"
+      ],
+      "prompt": "家に上がるときの「お邪魔します」に合うものを選んでください。",
+      "choices": [
+        {
+          "id": "a",
+          "text": "打扰了。"
+        },
+        {
+          "id": "b",
+          "text": "没关系。"
+        },
+        {
+          "id": "c",
+          "text": "不客气。"
+        }
+      ],
+      "answerId": "a",
+      "explanation": "「打扰了」は「お邪魔します」。bは「大丈夫です」、cは「どういたしまして」。",
+      "pinyin": "Dǎrǎo le.",
+      "translation": "お邪魔します。"
+    },
+    {
+      "id": "family-visit-q2",
+      "revision": 1,
+      "type": "single_choice",
+      "scenarioId": "family-visit",
+      "level": "beginner",
+      "tags": [
+        "訪問",
+        "手土産"
+      ],
+      "prompt": "手土産を渡すときの言い方として合うものを選んでください。",
+      "choices": [
+        {
+          "id": "a",
+          "text": "这是一点儿小礼物，请收下。"
+        },
+        {
+          "id": "b",
+          "text": "这个礼物很贵，你要吗？"
+        },
+        {
+          "id": "c",
+          "text": "请给我一点儿礼物。"
+        }
+      ],
+      "answerId": "a",
+      "explanation": "「一点儿小礼物」は「ささやかな贈り物」、「请收下」は「お受け取りください」。bは「この贈り物は高いけど要る？」、cは「贈り物を少しください」。",
+      "pinyin": "Zhè shì yìdiǎnr xiǎo lǐwù, qǐng shōuxià.",
+      "translation": "ささやかなものですが、どうぞお受け取りください。"
+    },
+    {
+      "id": "family-visit-q3",
+      "revision": 1,
+      "type": "single_choice",
+      "scenarioId": "family-visit",
+      "level": "beginner",
+      "tags": [
+        "訪問",
+        "手伝い"
+      ],
+      "prompt": "「何かお手伝いできることはありますか」に合う文を選んでください。",
+      "choices": [
+        {
+          "id": "a",
+          "text": "有什么需要我帮忙的吗？"
+        },
+        {
+          "id": "b",
+          "text": "你需要帮我吗？"
+        },
+        {
+          "id": "c",
+          "text": "你有什么问题吗？"
+        }
+      ],
+      "answerId": "a",
+      "explanation": "「需要我帮忙的」で「私が手伝う必要のあること」。bは「私を手伝う必要がありますか」、cは「何か質問はありますか」。",
+      "pinyin": "Yǒu shénme xūyào wǒ bāngmáng de ma?",
+      "translation": "何かお手伝いできることはありますか。"
+    },
+    {
+      "id": "family-visit-q4",
+      "revision": 1,
+      "type": "single_choice",
+      "scenarioId": "family-visit",
+      "level": "beginner",
+      "tags": [
+        "訪問",
+        "手伝い"
+      ],
+      "prompt": "「不用不用，你坐着休息吧。」の意味として合うものを選んでください。",
+      "choices": [
+        {
+          "id": "a",
+          "text": "いいのよ、座って休んでいて。"
+        },
+        {
+          "id": "b",
+          "text": "手伝ってくれないと困ります。"
+        },
+        {
+          "id": "c",
+          "text": "もう帰ってください。"
+        }
+      ],
+      "answerId": "a",
+      "explanation": "「不用」は「〜しなくていい」、「坐着」は「座ったままで」、「休息」は「休む」。",
+      "pinyin": "Búyòng búyòng, nǐ zuòzhe xiūxi ba.",
+      "translation": "いいのよ、座って休んでいて。"
+    },
+    {
+      "id": "family-visit-q5",
+      "revision": 1,
+      "type": "ordering",
+      "scenarioId": "family-visit",
+      "level": "beginner",
+      "tags": [
+        "訪問",
+        "帰り"
+      ],
+      "prompt": "「そろそろ失礼します」になるように並べ替えてください。",
+      "tokens": [
+        {
+          "id": "w1",
+          "text": "我"
+        },
+        {
+          "id": "w2",
+          "text": "该"
+        },
+        {
+          "id": "w3",
+          "text": "走"
+        },
+        {
+          "id": "w4",
+          "text": "了"
+        }
+      ],
+      "acceptedOrders": [
+        [
+          "w1",
+          "w2",
+          "w3",
+          "w4"
+        ]
+      ],
+      "explanation": "「该＋動詞＋了」で「そろそろ〜する時間だ」。",
+      "pinyin": "Wǒ gāi zǒu le.",
+      "translation": "そろそろ失礼します。"
+    },
+    {
+      "id": "family-visit-q6",
+      "revision": 1,
+      "type": "ordering",
+      "scenarioId": "family-visit",
+      "level": "beginner",
+      "tags": [
+        "訪問",
+        "帰り"
+      ],
+      "prompt": "「おもてなしありがとうございました」になるように並べ替えてください。",
+      "tokens": [
+        {
+          "id": "w1",
+          "text": "谢谢"
+        },
+        {
+          "id": "w2",
+          "text": "你们"
+        },
+        {
+          "id": "w3",
+          "text": "的"
+        },
+        {
+          "id": "w4",
+          "text": "招待"
+        }
+      ],
+      "acceptedOrders": [
+        [
+          "w1",
+          "w2",
+          "w3",
+          "w4"
+        ]
+      ],
+      "explanation": "「谢谢＋（誰）的＋（何）」で「（誰）の（何）に感謝します」。",
+      "pinyin": "Xièxie nǐmen de zhāodài.",
+      "translation": "おもてなしありがとうございました。"
+    },
+    {
+      "id": "family-visit-q7",
+      "revision": 1,
+      "type": "fill_blank",
+      "scenarioId": "family-visit",
+      "level": "beginner",
+      "tags": [
+        "訪問",
+        "挨拶"
+      ],
+      "prompt": "「遠慮しないで」になるよう、空欄に入る語を入力してください。",
+      "sentence": "别{{blank}}。",
+      "acceptedAnswers": [
+        "客气"
+      ],
+      "explanation": "「客气」は「遠慮する」。「别」は「〜しないで」。",
+      "pinyin": "Bié kèqi.",
+      "translation": "遠慮しないで。"
+    },
+    {
+      "id": "family-visit-q8",
+      "revision": 1,
+      "type": "fill_blank",
+      "scenarioId": "family-visit",
+      "level": "beginner",
+      "tags": [
+        "訪問",
+        "帰り"
+      ],
+      "prompt": "「また遊びに来てね」になるよう、「また」にあたる語を入力してください。",
+      "sentence": "下次{{blank}}来玩儿！",
+      "acceptedAnswers": [
+        "再"
+      ],
+      "explanation": "「再」はこれからくり返すことを表す「また」です。",
+      "pinyin": "Xià cì zài lái wánr!",
+      "translation": "また遊びに来てね。"
+    },
+    {
+      "id": "family-meal-q1",
+      "revision": 1,
+      "type": "single_choice",
+      "scenarioId": "family-meal",
+      "level": "beginner",
+      "tags": [
+        "食事",
+        "感想"
+      ],
+      "prompt": "「この料理、本当においしいです」に合う文を選んでください。",
+      "choices": [
+        {
+          "id": "a",
+          "text": "这道菜真好吃！"
+        },
+        {
+          "id": "b",
+          "text": "这道菜真好喝！"
+        },
+        {
+          "id": "c",
+          "text": "这道菜真好看！"
+        }
+      ],
+      "answerId": "a",
+      "explanation": "食べ物の「おいしい」は「好吃」。「好喝」は飲み物がおいしい、「好看」は見た目がきれいという意味です。",
+      "pinyin": "Zhè dào cài zhēn hǎochī!",
+      "translation": "この料理、本当においしいです。"
+    },
+    {
+      "id": "family-meal-q2",
+      "revision": 1,
+      "type": "single_choice",
+      "scenarioId": "family-meal",
+      "level": "beginner",
+      "tags": [
+        "食事",
+        "好み"
+      ],
+      "prompt": "「辛いものはあまり得意ではありません」に合う文を選んでください。",
+      "choices": [
+        {
+          "id": "a",
+          "text": "我不太能吃辣。"
+        },
+        {
+          "id": "b",
+          "text": "我很喜欢吃辣。"
+        },
+        {
+          "id": "c",
+          "text": "我不吃饭。"
+        }
+      ],
+      "answerId": "a",
+      "explanation": "「不太能」で「あまり〜できない」。bは「辛いものが大好きです」、cは「ご飯を食べません」。",
+      "pinyin": "Wǒ bú tài néng chī là.",
+      "translation": "辛いものはあまり得意ではありません。"
+    },
+    {
+      "id": "family-meal-q3",
+      "revision": 1,
+      "type": "single_choice",
+      "scenarioId": "family-meal",
+      "level": "beginner",
+      "tags": [
+        "食事",
+        "満腹"
+      ],
+      "prompt": "おかわりを丁寧に断るときの言い方として合うものを選んでください。",
+      "choices": [
+        {
+          "id": "a",
+          "text": "谢谢，我已经吃饱了。"
+        },
+        {
+          "id": "b",
+          "text": "我不要你的饭。"
+        },
+        {
+          "id": "c",
+          "text": "我还没吃。"
+        }
+      ],
+      "answerId": "a",
+      "explanation": "「吃饱了」は「おなかいっぱいになった」。お礼を添えると丁寧です。bは「あなたのご飯は要りません」で失礼、cは「まだ食べていません」。",
+      "pinyin": "Xièxie, wǒ yǐjīng chībǎo le.",
+      "translation": "ありがとうございます、もうおなかいっぱいです。"
+    },
+    {
+      "id": "family-meal-q4",
+      "revision": 1,
+      "type": "single_choice",
+      "scenarioId": "family-meal",
+      "level": "beginner",
+      "tags": [
+        "食事",
+        "勧め"
+      ],
+      "prompt": "「再来一碗米饭吧？」の意味として合うものを選んでください。",
+      "choices": [
+        {
+          "id": "a",
+          "text": "ご飯をもう一杯どう？"
+        },
+        {
+          "id": "b",
+          "text": "ご飯をもう一度作ろうか？"
+        },
+        {
+          "id": "c",
+          "text": "ご飯はもうないよ。"
+        }
+      ],
+      "answerId": "a",
+      "explanation": "「再来一＋量詞＋名詞」で「もう一つ（一杯）どう？」と勧める言い方です。「碗」は茶碗に入ったものを数えます。",
+      "pinyin": "Zài lái yì wǎn mǐfàn ba?",
+      "translation": "ご飯をもう一杯どう？"
+    },
+    {
+      "id": "family-meal-q5",
+      "revision": 1,
+      "type": "ordering",
+      "scenarioId": "family-meal",
+      "level": "beginner",
+      "tags": [
+        "食事",
+        "好み"
+      ],
+      "prompt": "「辛いものは好き？」になるように並べ替えてください。",
+      "tokens": [
+        {
+          "id": "w1",
+          "text": "你"
+        },
+        {
+          "id": "w2",
+          "text": "喜欢"
+        },
+        {
+          "id": "w3",
+          "text": "吃"
+        },
+        {
+          "id": "w4",
+          "text": "辣的"
+        },
+        {
+          "id": "w5",
+          "text": "吗"
+        }
+      ],
+      "acceptedOrders": [
+        [
+          "w1",
+          "w2",
+          "w3",
+          "w4",
+          "w5"
+        ]
+      ],
+      "explanation": "文末に「吗」を付けると「はい／いいえ」で答える疑問文になります。",
+      "pinyin": "Nǐ xǐhuan chī là de ma?",
+      "translation": "辛いものは好き？"
+    },
+    {
+      "id": "family-meal-q6",
+      "revision": 1,
+      "type": "ordering",
+      "scenarioId": "family-meal",
+      "level": "beginner",
+      "tags": [
+        "食事",
+        "質問"
+      ],
+      "prompt": "「この料理は何という名前ですか」になるように並べ替えてください。",
+      "tokens": [
+        {
+          "id": "w1",
+          "text": "这个"
+        },
+        {
+          "id": "w2",
+          "text": "菜"
+        },
+        {
+          "id": "w3",
+          "text": "叫"
+        },
+        {
+          "id": "w4",
+          "text": "什么"
+        },
+        {
+          "id": "w5",
+          "text": "名字"
+        }
+      ],
+      "acceptedOrders": [
+        [
+          "w1",
+          "w2",
+          "w3",
+          "w4",
+          "w5"
+        ]
+      ],
+      "explanation": "「叫什么名字」で「何という名前か」。尋ねたいものを主語にして前に置きます。",
+      "pinyin": "Zhège cài jiào shénme míngzi?",
+      "translation": "この料理は何という名前ですか。"
+    },
+    {
+      "id": "family-meal-q7",
+      "revision": 1,
+      "type": "fill_blank",
+      "scenarioId": "family-meal",
+      "level": "beginner",
+      "tags": [
+        "食事",
+        "感想"
+      ],
+      "prompt": "「このスープ、本当においしいです」になるよう、スープの「おいしい」にあたる語を入力してください。",
+      "sentence": "这个汤真{{blank}}。",
+      "acceptedAnswers": [
+        "好喝"
+      ],
+      "explanation": "スープや飲み物の「おいしい」は「好喝」を使います。",
+      "pinyin": "Zhège tāng zhēn hǎohē.",
+      "translation": "このスープ、本当においしいです。"
+    },
+    {
+      "id": "family-meal-q8",
+      "revision": 1,
+      "type": "fill_blank",
+      "scenarioId": "family-meal",
+      "level": "beginner",
+      "tags": [
+        "食事",
+        "勧め"
+      ],
+      "prompt": "「じゃあこれを（ちょっと）食べてみて」になるよう、空欄に入る語を入力してください。",
+      "sentence": "那你{{blank}}这个。",
+      "acceptedAnswers": [
+        "尝尝",
+        "尝一尝",
+        "尝一下"
+      ],
+      "explanation": "「尝」は「味見する」。「尝尝」「尝一尝」「尝一下」はどれも「ちょっと食べてみる」の意味です。",
+      "pinyin": "Nà nǐ chángchang zhège.",
+      "translation": "じゃあこれを食べてみて。"
+    },
+    {
+      "id": "family-daily-q1",
+      "revision": 1,
+      "type": "single_choice",
+      "scenarioId": "family-daily",
+      "level": "beginner",
+      "tags": [
+        "近況",
+        "仕事"
+      ],
+      "prompt": "「最近、仕事は忙しい？」に合う文を選んでください。",
+      "choices": [
+        {
+          "id": "a",
+          "text": "最近工作忙吗？"
+        },
+        {
+          "id": "b",
+          "text": "你的工作是什么？"
+        },
+        {
+          "id": "c",
+          "text": "你最近去哪儿了？"
+        }
+      ],
+      "answerId": "a",
+      "explanation": "「忙吗？」で「忙しいですか」。bは「あなたの仕事は何ですか」、cは「最近どこへ行きましたか」。",
+      "pinyin": "Zuìjìn gōngzuò máng ma?",
+      "translation": "最近、仕事は忙しい？"
+    },
+    {
+      "id": "family-daily-q2",
+      "revision": 1,
+      "type": "single_choice",
+      "scenarioId": "family-daily",
+      "level": "beginner",
+      "tags": [
+        "近況",
+        "相づち"
+      ],
+      "prompt": "相手の話に「そうですね」と相づちを打つときの言い方を選んでください。",
+      "choices": [
+        {
+          "id": "a",
+          "text": "是啊。"
+        },
+        {
+          "id": "b",
+          "text": "不是。"
+        },
+        {
+          "id": "c",
+          "text": "为什么？"
+        }
+      ],
+      "answerId": "a",
+      "explanation": "「是啊」は同意の相づちです。bは「違います」、cは「どうして？」。",
+      "pinyin": "Shì a.",
+      "translation": "そうですね。"
+    },
+    {
+      "id": "family-daily-q3",
+      "revision": 1,
+      "type": "single_choice",
+      "scenarioId": "family-daily",
+      "level": "beginner",
+      "tags": [
+        "近況",
+        "天気"
+      ],
+      "prompt": "「今天天气不错。」の意味として合うものを選んでください。",
+      "choices": [
+        {
+          "id": "a",
+          "text": "今日はいい天気だ。"
+        },
+        {
+          "id": "b",
+          "text": "今日は天気が悪い。"
+        },
+        {
+          "id": "c",
+          "text": "今日の天気はわからない。"
+        }
+      ],
+      "answerId": "a",
+      "explanation": "「不错」は「悪くない」、つまり「いい」という意味です。",
+      "pinyin": "Jīntiān tiānqì búcuò.",
+      "translation": "今日はいい天気だ。"
+    },
+    {
+      "id": "family-daily-q4",
+      "revision": 1,
+      "type": "single_choice",
+      "scenarioId": "family-daily",
+      "level": "beginner",
+      "tags": [
+        "近況",
+        "趣味"
+      ],
+      "prompt": "「ときどき山登りに行きます」に合う文を選んでください。",
+      "choices": [
+        {
+          "id": "a",
+          "text": "我有时候去爬山。"
+        },
+        {
+          "id": "b",
+          "text": "我每天去爬山。"
+        },
+        {
+          "id": "c",
+          "text": "我不去爬山。"
+        }
+      ],
+      "answerId": "a",
+      "explanation": "「有时候」は「ときどき」。bは「毎日山登りに行きます」、cは「山登りには行きません」。",
+      "pinyin": "Wǒ yǒu shíhou qù páshān.",
+      "translation": "ときどき山登りに行きます。"
+    },
+    {
+      "id": "family-daily-q5",
+      "revision": 1,
+      "type": "ordering",
+      "scenarioId": "family-daily",
+      "level": "beginner",
+      "tags": [
+        "近況",
+        "週末"
+      ],
+      "prompt": "「週末は普段何をしているの？」になるように並べ替えてください。",
+      "tokens": [
+        {
+          "id": "w1",
+          "text": "周末"
+        },
+        {
+          "id": "w2",
+          "text": "一般"
+        },
+        {
+          "id": "w3",
+          "text": "做"
+        },
+        {
+          "id": "w4",
+          "text": "什么"
+        }
+      ],
+      "acceptedOrders": [
+        [
+          "w1",
+          "w2",
+          "w3",
+          "w4"
+        ]
+      ],
+      "explanation": "時を表す「周末」を文頭に置き、「一般（普段）」を動詞の前に置きます。",
+      "pinyin": "Zhōumò yìbān zuò shénme?",
+      "translation": "週末は普段何をしているの？"
+    },
+    {
+      "id": "family-daily-q6",
+      "revision": 1,
+      "type": "ordering",
+      "scenarioId": "family-daily",
+      "level": "beginner",
+      "tags": [
+        "近況",
+        "週末"
+      ],
+      "prompt": "「（私たちは）よく公園へ散歩に行きます」になるように並べ替えてください。",
+      "tokens": [
+        {
+          "id": "w1",
+          "text": "我们"
+        },
+        {
+          "id": "w2",
+          "text": "常"
+        },
+        {
+          "id": "w3",
+          "text": "去"
+        },
+        {
+          "id": "w4",
+          "text": "公园"
+        },
+        {
+          "id": "w5",
+          "text": "散步"
+        }
+      ],
+      "acceptedOrders": [
+        [
+          "w1",
+          "w2",
+          "w3",
+          "w4",
+          "w5"
+        ]
+      ],
+      "explanation": "「常」は動詞の前に置きます。「去＋場所＋動詞」で「〜へ…しに行く」。",
+      "pinyin": "Wǒmen cháng qù gōngyuán sànbù.",
+      "translation": "よく公園へ散歩に行きます。"
+    },
+    {
+      "id": "family-daily-q7",
+      "revision": 1,
+      "type": "fill_blank",
+      "scenarioId": "family-daily",
+      "level": "beginner",
+      "tags": [
+        "近況",
+        "仕事"
+      ],
+      "prompt": "「けっこう忙しいです」になるよう、空欄に入る語を入力してください。",
+      "sentence": "{{blank}}忙的。",
+      "acceptedAnswers": [
+        "挺"
+      ],
+      "explanation": "「挺〜的」で「なかなか〜だ」。話し言葉でよく使います。",
+      "pinyin": "Tǐng máng de.",
+      "translation": "けっこう忙しいです。"
+    },
+    {
+      "id": "family-daily-q8",
+      "revision": 1,
+      "type": "fill_blank",
+      "scenarioId": "family-daily",
+      "level": "beginner",
+      "tags": [
+        "近況",
+        "天気"
+      ],
+      "prompt": "「今日は少し寒いです」になるよう、「少し」にあたる語を入力してください。",
+      "sentence": "今天{{blank}}冷。",
+      "acceptedAnswers": [
+        "有点儿",
+        "有点"
+      ],
+      "explanation": "「有点儿＋形容詞」で「少し〜だ」。好ましくないことに使うことが多い言い方です。「有点」とも言います。",
+      "pinyin": "Jīntiān yǒudiǎnr lěng.",
+      "translation": "今日は少し寒いです。"
+    },
+    {
+      "id": "family-marriage-q1",
+      "revision": 1,
+      "type": "single_choice",
+      "scenarioId": "family-marriage",
+      "level": "beginner",
+      "tags": [
+        "結婚の挨拶",
+        "お願い"
+      ],
+      "prompt": "「お二人に祝福していただけたらと思っています」に合う文を選んでください。",
+      "choices": [
+        {
+          "id": "a",
+          "text": "我们希望得到您二位的祝福。"
+        },
+        {
+          "id": "b",
+          "text": "我们希望您二位结婚。"
+        },
+        {
+          "id": "c",
+          "text": "我们得到了很多礼物。"
+        }
+      ],
+      "answerId": "a",
+      "explanation": "「得到〜的祝福」で「〜の祝福を得る」。bは「お二人に結婚してほしい」、cは「たくさん贈り物をもらいました」。",
+      "pinyin": "Wǒmen xīwàng dédào nín èr wèi de zhùfú.",
+      "translation": "お二人に祝福していただけたらと思っています。"
+    },
+    {
+      "id": "family-marriage-q2",
+      "revision": 1,
+      "type": "single_choice",
+      "scenarioId": "family-marriage",
+      "level": "beginner",
+      "tags": [
+        "結婚の挨拶",
+        "呼び方"
+      ],
+      "prompt": "二人の目上の人に、敬意をこめて「お二人」と言うときはどれですか。",
+      "choices": [
+        {
+          "id": "a",
+          "text": "您二位"
+        },
+        {
+          "id": "b",
+          "text": "你们俩"
+        },
+        {
+          "id": "c",
+          "text": "他们"
+        }
+      ],
+      "answerId": "a",
+      "explanation": "「位」は人を敬って数える量詞で、「您二位」は丁寧な言い方です。「你们俩」は親しい間柄で使う「あなたたち二人」、「他们」は「彼ら」。",
+      "pinyin": "nín èr wèi",
+      "translation": "お二人"
+    },
+    {
+      "id": "family-marriage-q3",
+      "revision": 1,
+      "type": "single_choice",
+      "scenarioId": "family-marriage",
+      "level": "beginner",
+      "tags": [
+        "結婚の挨拶",
+        "今後"
+      ],
+      "prompt": "結婚の時期など、まだ決まっていないことを聞かれました。答え方として合うものを選んでください。",
+      "choices": [
+        {
+          "id": "a",
+          "text": "我们还在商量。"
+        },
+        {
+          "id": "b",
+          "text": "我们不想告诉你。"
+        },
+        {
+          "id": "c",
+          "text": "我们已经结婚了。"
+        }
+      ],
+      "answerId": "a",
+      "explanation": "「还在商量」は「まだ相談しています」。bは「教えたくありません」、cは「もう結婚しました」。",
+      "pinyin": "Wǒmen hái zài shāngliang.",
+      "translation": "まだ相談しています。"
+    },
+    {
+      "id": "family-marriage-q4",
+      "revision": 1,
+      "type": "single_choice",
+      "scenarioId": "family-marriage",
+      "level": "beginner",
+      "tags": [
+        "結婚の挨拶",
+        "お礼"
+      ],
+      "prompt": "「抽时间」の意味として合うものを選んでください。",
+      "choices": [
+        {
+          "id": "a",
+          "text": "時間を作る"
+        },
+        {
+          "id": "b",
+          "text": "時間を無駄にする"
+        },
+        {
+          "id": "c",
+          "text": "時間がない"
+        }
+      ],
+      "answerId": "a",
+      "explanation": "「抽」は「引き出す」。「抽时间」で「（忙しい中で）時間を作る」という意味です。",
+      "pinyin": "chōu shíjiān",
+      "translation": "時間を作る"
+    },
+    {
+      "id": "family-marriage-q5",
+      "revision": 1,
+      "type": "ordering",
+      "scenarioId": "family-marriage",
+      "level": "beginner",
+      "tags": [
+        "結婚の挨拶",
+        "意思"
+      ],
+      "prompt": "「私たちは結婚することを決めました」になるように並べ替えてください。",
+      "tokens": [
+        {
+          "id": "w1",
+          "text": "我们"
+        },
+        {
+          "id": "w2",
+          "text": "决定"
+        },
+        {
+          "id": "w3",
+          "text": "结婚"
+        },
+        {
+          "id": "w4",
+          "text": "了"
+        }
+      ],
+      "acceptedOrders": [
+        [
+          "w1",
+          "w2",
+          "w3",
+          "w4"
+        ]
+      ],
+      "explanation": "「决定＋動詞」で「〜することを決める」。文末の「了」で、決めたことを伝えます。",
+      "pinyin": "Wǒmen juédìng jiéhūn le.",
+      "translation": "私たちは結婚することを決めました。"
+    },
+    {
+      "id": "family-marriage-q6",
+      "revision": 1,
+      "type": "ordering",
+      "scenarioId": "family-marriage",
+      "level": "beginner",
+      "tags": [
+        "結婚の挨拶",
+        "今後"
+      ],
+      "prompt": "「具体的な時期は、私たちはまだ相談しています」になるように並べ替えてください。",
+      "tokens": [
+        {
+          "id": "w1",
+          "text": "具体的时间"
+        },
+        {
+          "id": "w2",
+          "text": "我们"
+        },
+        {
+          "id": "w3",
+          "text": "还在"
+        },
+        {
+          "id": "w4",
+          "text": "商量"
+        }
+      ],
+      "acceptedOrders": [
+        [
+          "w1",
+          "w2",
+          "w3",
+          "w4"
+        ],
+        [
+          "w2",
+          "w1",
+          "w3",
+          "w4"
+        ]
+      ],
+      "explanation": "話題（具体的な時期）を文頭に出す言い方です。「我们」を先に置く言い方も使われます。",
+      "pinyin": "Jùtǐ de shíjiān wǒmen hái zài shāngliang.",
+      "translation": "具体的な時期は、まだ相談しています。"
+    },
+    {
+      "id": "family-marriage-q7",
+      "revision": 1,
+      "type": "fill_blank",
+      "scenarioId": "family-marriage",
+      "level": "beginner",
+      "tags": [
+        "結婚の挨拶",
+        "お礼"
+      ],
+      "prompt": "「今日は私たちに会う時間を作ってくださり、ありがとうございます」になるよう、空欄に入る語を入力してください。",
+      "sentence": "谢谢您二位今天{{blank}}时间和我们见面。",
+      "acceptedAnswers": [
+        "抽"
+      ],
+      "explanation": "「抽时间」で「時間を作る」。",
+      "pinyin": "Xièxie nín èr wèi jīntiān chōu shíjiān hé wǒmen jiànmiàn.",
+      "translation": "今日は私たちに会う時間を作ってくださり、ありがとうございます。"
+    },
+    {
+      "id": "family-marriage-q8",
+      "revision": 1,
+      "type": "fill_blank",
+      "scenarioId": "family-marriage",
+      "level": "beginner",
+      "tags": [
+        "結婚の挨拶",
+        "お願い"
+      ],
+      "prompt": "「お二人に祝福していただけたらと思っています」になるよう、「祝福」にあたる語を入力してください。",
+      "sentence": "我们希望得到您二位的{{blank}}。",
+      "acceptedAnswers": [
+        "祝福"
+      ],
+      "explanation": "「祝福」は日本語と同じ漢字で、「祝福」の意味です。",
+      "pinyin": "Wǒmen xīwàng dédào nín èr wèi de zhùfú.",
+      "translation": "お二人に祝福していただけたらと思っています。"
+    },
+    {
+      "id": "family-clarification-q1",
+      "revision": 1,
+      "type": "single_choice",
+      "scenarioId": "family-clarification",
+      "level": "beginner",
+      "tags": [
+        "聞き返し",
+        "お願い"
+      ],
+      "prompt": "「もう一度言っていただけますか」に合う文を選んでください。",
+      "choices": [
+        {
+          "id": "a",
+          "text": "请您再说一遍，好吗？"
+        },
+        {
+          "id": "b",
+          "text": "请您别说了，好吗？"
+        },
+        {
+          "id": "c",
+          "text": "您说得很好。"
+        }
+      ],
+      "answerId": "a",
+      "explanation": "「再说一遍」で「もう一度言う」。bは「もう話さないでください」、cは「お上手ですね」。",
+      "pinyin": "Qǐng nín zài shuō yí biàn, hǎo ma?",
+      "translation": "もう一度言っていただけますか。"
+    },
+    {
+      "id": "family-clarification-q2",
+      "revision": 1,
+      "type": "single_choice",
+      "scenarioId": "family-clarification",
+      "level": "beginner",
+      "tags": [
+        "聞き返し",
+        "お願い"
+      ],
+      "prompt": "「少しゆっくり話してください」に合う文を選んでください。",
+      "choices": [
+        {
+          "id": "a",
+          "text": "请您说慢一点儿。"
+        },
+        {
+          "id": "b",
+          "text": "请您说快一点儿。"
+        },
+        {
+          "id": "c",
+          "text": "请您说中文。"
+        }
+      ],
+      "answerId": "a",
+      "explanation": "「慢」は「ゆっくり」、「快」は「速い」。cは「中国語で話してください」。",
+      "pinyin": "Qǐng nín shuō màn yìdiǎnr.",
+      "translation": "少しゆっくり話してください。"
+    },
+    {
+      "id": "family-clarification-q3",
+      "revision": 1,
+      "type": "single_choice",
+      "scenarioId": "family-clarification",
+      "level": "beginner",
+      "tags": [
+        "聞き返し",
+        "確認"
+      ],
+      "prompt": "分からない言葉の意味を尋ねるときの言い方として合うものを選んでください。",
+      "choices": [
+        {
+          "id": "a",
+          "text": "“机场”是什么意思？"
+        },
+        {
+          "id": "b",
+          "text": "“机场”在哪儿？"
+        },
+        {
+          "id": "c",
+          "text": "我去机场。"
+        }
+      ],
+      "answerId": "a",
+      "explanation": "「〜是什么意思？」で「〜はどういう意味ですか」。bは「空港はどこですか」、cは「空港へ行きます」。",
+      "pinyin": "“Jīchǎng” shì shénme yìsi?",
+      "translation": "「机场」はどういう意味ですか。"
+    },
+    {
+      "id": "family-clarification-q4",
+      "revision": 1,
+      "type": "single_choice",
+      "scenarioId": "family-clarification",
+      "level": "beginner",
+      "tags": [
+        "聞き返し",
+        "確認"
+      ],
+      "prompt": "「我明白了。」の意味として合うものを選んでください。",
+      "choices": [
+        {
+          "id": "a",
+          "text": "わかりました。"
+        },
+        {
+          "id": "b",
+          "text": "聞こえません。"
+        },
+        {
+          "id": "c",
+          "text": "忘れました。"
+        }
+      ],
+      "answerId": "a",
+      "explanation": "「明白」は「理解する・わかる」。「了」で「わかった」という変化を表します。",
+      "pinyin": "Wǒ míngbai le.",
+      "translation": "わかりました。"
+    },
+    {
+      "id": "family-clarification-q5",
+      "revision": 1,
+      "type": "ordering",
+      "scenarioId": "family-clarification",
+      "level": "beginner",
+      "tags": [
+        "聞き返し",
+        "お願い"
+      ],
+      "prompt": "「もう一度言ってください」になるように並べ替えてください。",
+      "tokens": [
+        {
+          "id": "w1",
+          "text": "请"
+        },
+        {
+          "id": "w2",
+          "text": "您"
+        },
+        {
+          "id": "w3",
+          "text": "再"
+        },
+        {
+          "id": "w4",
+          "text": "说"
+        },
+        {
+          "id": "w5",
+          "text": "一遍"
+        }
+      ],
+      "acceptedOrders": [
+        [
+          "w1",
+          "w2",
+          "w3",
+          "w4",
+          "w5"
+        ]
+      ],
+      "explanation": "「请您＋動詞」で丁寧なお願いになります。回数を表す「一遍」は動詞の後ろに置きます。",
+      "pinyin": "Qǐng nín zài shuō yí biàn.",
+      "translation": "もう一度言ってください。"
+    },
+    {
+      "id": "family-clarification-q6",
+      "revision": 1,
+      "type": "ordering",
+      "scenarioId": "family-clarification",
+      "level": "beginner",
+      "tags": [
+        "聞き返し",
+        "確認"
+      ],
+      "prompt": "「この字はどう読みますか」になるように並べ替えてください。",
+      "tokens": [
+        {
+          "id": "w1",
+          "text": "这个"
+        },
+        {
+          "id": "w2",
+          "text": "字"
+        },
+        {
+          "id": "w3",
+          "text": "怎么"
+        },
+        {
+          "id": "w4",
+          "text": "念"
+        }
+      ],
+      "acceptedOrders": [
+        [
+          "w1",
+          "w2",
+          "w3",
+          "w4"
+        ]
+      ],
+      "explanation": "「怎么＋動詞」で「どうやって〜するか」。",
+      "pinyin": "Zhège zì zěnme niàn?",
+      "translation": "この字はどう読みますか。"
+    },
+    {
+      "id": "family-clarification-q7",
+      "revision": 1,
+      "type": "fill_blank",
+      "scenarioId": "family-clarification",
+      "level": "beginner",
+      "tags": [
+        "聞き返し",
+        "お願い"
+      ],
+      "prompt": "「少しゆっくり話してください」になるよう、「ゆっくり」にあたる語を入力してください。",
+      "sentence": "请您说{{blank}}一点儿。",
+      "acceptedAnswers": [
+        "慢"
+      ],
+      "explanation": "「慢」は「ゆっくり」。「慢一点儿」で「少しゆっくり」。",
+      "pinyin": "Qǐng nín shuō màn yìdiǎnr.",
+      "translation": "少しゆっくり話してください。"
+    },
+    {
+      "id": "family-clarification-q8",
+      "revision": 1,
+      "type": "fill_blank",
+      "scenarioId": "family-clarification",
+      "level": "beginner",
+      "tags": [
+        "聞き返し",
+        "確認"
+      ],
+      "prompt": "「わかりました」になるよう、空欄に入る語を入力してください。",
+      "sentence": "我{{blank}}了。",
+      "acceptedAnswers": [
+        "明白",
+        "知道",
+        "懂"
+      ],
+      "explanation": "「我明白了」は「理解しました」。「我知道了」「我懂了」も「わかりました」の意味で使えます。",
+      "pinyin": "Wǒ míngbai le.",
+      "translation": "わかりました。"
+    }
+  ]
+}

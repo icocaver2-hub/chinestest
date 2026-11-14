@@ -6,6 +6,7 @@ import { startTodaySession } from '../../app/start-session';
 import { answerText, correctAnswerText, gradeAnswer } from '../../domain/grading';
 import { currentItem, sessionLength, summarizeSession } from '../../domain/session';
 import { toStudyDate } from '../../domain/study-date';
+import { AudioPlayer } from '../../components/AudioPlayer';
 import { formatPercent, ORIGIN_LABELS, QUESTION_TYPE_LABELS } from '../../components/labels';
 import { EmptyState, ErrorState, Loading } from '../../components/States';
 import { useAsyncData } from '../../components/useAsyncData';
@@ -154,6 +155,7 @@ function QuestionCard({
         <h2 id="question-prompt" className="question-prompt">
           {question.prompt}
         </h2>
+        {question.audioId && <AudioPlayer packId={question.ownerPackId} audioId={question.audioId} label="問題" />}
         {question.type === 'single_choice' && <SingleChoiceInput question={question} {...inputProps} />}
         {question.type === 'ordering' && <OrderingInput question={question} {...inputProps} />}
         {question.type === 'fill_blank' && <FillBlankInput question={question} {...inputProps} />}
@@ -238,6 +240,14 @@ function FeedbackView({ feedback, onNext }: { feedback: Feedback; onNext: () => 
           </dd>
           <dt>訳</dt>
           <dd>{q.translation}</dd>
+          {q.transcript && (
+            <>
+              <dt>音声の本文</dt>
+              <dd className="zh" lang="zh-CN">
+                {q.transcript}
+              </dd>
+            </>
+          )}
           <dt>解説</dt>
           <dd>{q.explanation}</dd>
         </dl>

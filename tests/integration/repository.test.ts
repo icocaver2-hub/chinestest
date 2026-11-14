@@ -40,9 +40,10 @@ function fakeFetch(files: Record<string, string | Error>): FetchText {
   };
 }
 
+/** サンプル教材だけを同梱とみなす（テストを小さく保つため） */
 const bundled = () =>
   fakeFetch({
-    'index.json': readText('public/content/index.json'),
+    'index.json': '{"bundledPacks":["sample-meal.json"]}',
     'sample-meal.json': readText('public/content/sample-meal.json'),
   });
 
@@ -178,6 +179,31 @@ describe('初期教材の登録（T01）', () => {
     expect(await repo.getContentGeneration()).toBe(0);
     await repo.registerPack(validPack(), 'bundled');
     expect((await repo.db.get('meta', META_CONTENT_GENERATION))?.value).toBe(1);
+  });
+});
+
+describe('実際の同梱教材', () => {
+  it('public/content/index.json の教材（core-family: 6シーン48問）が登録される', async () => {
+    const { repo } = await freshRepo();
+    const index = JSON.parse(readText('public/content/index.json')) as { bundledPacks: string[] };
+    const files: Record<string, string> = { 'index.json': readText('public/content/index.json') };
+    for (const f of index.bundledPacks) files[f] = readText(`public/content/${f}`);
+    const report = await registerBundledContent(repo, fakeFetch(files), '/');
+    expect(report.packs.map((p) => [p.packId, p.status])).toEqual([['core-family', 'registered']]);
+    expect(await repo.db.count('scenarios')).toBe(6);
+    expect(await repo.db.count('questions')).toBe(48);
+  });
+
+  it('サンプルを登録済みの利用者にも core-family が追加され、サンプルは残る', async () => {
+    const { repo } = await freshRepo();
+    await registerBundledContent(repo, bundled(), '/');
+    const files = {
+      'index.json': readText('public/content/index.json'),
+      'core-family.json': readText('public/content/core-family.json'),
+    };
+    await registerBundledContent(repo, fakeFetch(files), '/');
+    expect((await repo.listPacks()).map((p) => p.packId).sort()).toEqual(['core-family', 'sample-meal']);
+    expect(await repo.db.count('questions')).toBe(51);
   });
 });
 

@@ -178,3 +178,15 @@ select, input[type='number'] { font: inherit; min-height: 44px; padding: 0.25rem
 .field label { display: block; font-weight: 600; margin-bottom: 0.25rem; }
 .check { display: flex; gap: 0.5rem; align-items: center; min-height: 44px; }
 .session-origin { font-size: 0.875rem; font-weight: 400; color: var(--muted); margin: 0; }
+
+/* ---- フェーズ3: 会話・音声 ---- */
+.display-toggles { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin: 0 0 1rem; }
+.choice-ja { font-size: 1.05rem; }
+.audio-player { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin: 0.4rem 0; }
+.rate-select { min-height: 40px; }
+.audio-missing { display: inline-block; color: var(--muted); border: 1px dashed var(--border); border-radius: 6px; padding: 0.1rem 0.5rem; }
+.talk-card h2 { margin-bottom: 0.5rem; }
+.turn.revealed { border-left-color: var(--primary); background: #eaf2f8; border-radius: 0 6px 6px 0; }
+.turn.revealed:focus { outline: 3px solid var(--focus); outline-offset: 2px; }
+.rating-buttons { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.5rem; }
+.rating-buttons .button { padding: 0.5rem 0.25rem; font-size: 0.95rem; }

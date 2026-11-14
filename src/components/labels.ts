@@ -1,5 +1,5 @@
 import type { Level, QuestionType, ScenarioCategory } from '../types/content';
-import type { SessionOrigin } from '../types/db';
+import type { SelfRating, SessionOrigin } from '../types/db';
 
 export const LEVEL_LABELS: Record<Level, string> = {
   beginner: '入門',
@@ -33,4 +33,15 @@ export const ORIGIN_LABELS: Record<SessionOrigin, string> = {
 
 export function formatPercent(ratio: number | null): string {
   return ratio === null ? '—' : `${Math.round(ratio * 100)}%`;
+}
+
+export const SELF_RATING_LABELS: Record<SelfRating, string> = {
+  said: '言えた',
+  hesitated: '少し迷った',
+  could_not_say: '言えなかった',
+};
+
+/** かなを含む文字列は日本語、それ以外は中国語として lang を付ける */
+export function langOf(text: string): 'ja' | 'zh-CN' {
+  return /[\u3040-\u30ff]/u.test(text) ? 'ja' : 'zh-CN';
 }

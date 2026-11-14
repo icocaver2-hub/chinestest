@@ -3,7 +3,7 @@ import { useReadyApp } from '../../app/AppContext';
 import { hrefFor } from '../../app/router';
 import { summarizeSession } from '../../domain/session';
 import { toStudyDate } from '../../domain/study-date';
-import { formatPercent, ORIGIN_LABELS } from '../../components/labels';
+import { formatPercent, ORIGIN_LABELS, SELF_RATING_LABELS } from '../../components/labels';
 import { EmptyState, ErrorState, Loading } from '../../components/States';
 import { useAsyncData } from '../../components/useAsyncData';
 
@@ -16,20 +16,25 @@ export function HistoryPage() {
     const [sessions, attempts, conversations] = await Promise.all([
       practice.listSessions(),
       repo.db.getAll('attempts'),
-      repo.db.count('conversationAttempts'),
+      practice.listConversationRatings(),
     ]);
     const bySession = new Map<string, typeof attempts>();
     for (const a of attempts) bySession.set(a.sessionId, [...(bySession.get(a.sessionId) ?? []), a]);
     const rows = sessions
       .map((s) => ({ session: s, summary: summarizeSession(bySession.get(s.sessionId) ?? []) }))
       .filter((r) => r.summary.answered > 0 || r.session.status === 'active');
-    return { rows, total: summarizeSession(attempts), conversations };
+    const ratingCounts = {
+      said: conversations.filter((c) => c.rating === 'said').length,
+      hesitated: conversations.filter((c) => c.rating === 'hesitated').length,
+      could_not_say: conversations.filter((c) => c.rating === 'could_not_say').length,
+    };
+    return { rows, total: summarizeSession(attempts), conversations: conversations.length, ratingCounts };
   }, [repo, practice, dataVersion]);
   const data = useAsyncData(load);
 
   if (data.status === 'loading') return <Loading />;
   if (data.status === 'error') return <ErrorState title="学習記録を読み込めませんでした">再読み込みしてください。</ErrorState>;
-  const { rows, total, conversations } = data.data;
+  const { rows, total, conversations, ratingCounts } = data.data;
 
   return (
     <div className="page">
@@ -69,6 +74,12 @@ export function HistoryPage() {
                 <dd>{conversations}件</dd>
               </div>
             </dl>
+            {conversations > 0 && (
+              <p className="small">
+                会話の自己評価の内訳: {SELF_RATING_LABELS.said} {ratingCounts.said}・{SELF_RATING_LABELS.hesitated}{' '}
+                {ratingCounts.hesitated}・{SELF_RATING_LABELS.could_not_say} {ratingCounts.could_not_say}
+              </p>
+            )}
             <p className="small muted">会話の自己評価は正答率に含めません。</p>
           </section>
           <section>

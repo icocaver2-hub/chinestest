@@ -95,6 +95,11 @@ export class StudyRepository {
     return new Set(keys.map(([, audioId]) => audioId));
   }
 
+  /** 保存済みの音声（パック内で検索する） */
+  getAudioAsset(packId: string, audioId: string) {
+    return this.db.get('audioAssets', [packId, audioId]);
+  }
+
   async getContentGeneration(): Promise<number> {
     const row = await this.db.get('meta', META_CONTENT_GENERATION);
     return typeof row?.value === 'number' ? row.value : 0;
